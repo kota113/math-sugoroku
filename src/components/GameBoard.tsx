@@ -1,4 +1,5 @@
 import React from 'react';
+import MathProblemDisplay from './MathProblemDisplay';
 
 const GameBoard: React.FC = () => {
   return (
@@ -11,4 +12,3 @@ const GameBoard: React.FC = () => {
 };
 
 export default GameBoard;
-import MathProblemDisplay from './MathProblemDisplay';
