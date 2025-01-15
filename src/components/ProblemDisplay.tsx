@@ -1,42 +1,9 @@
 import React from 'react';
-import { Problem } from "../types";
-import {FaDivide, FaEquals, FaMinus, FaPlus, FaQuestion} from "react-icons/fa6";
-import {FaTimes} from "react-icons/fa";
-
-const FractionDisplay = ({ fraction }: {fraction: string}) => {
-  const [numerator, denominator] = fraction.split('/');
-
-  return (
-    <div className="inline-flex flex-col items-center">
-      <div className="">{numerator}</div>
-      <div className="border-b border-black w-8"></div>
-      <div className="">{denominator}</div>
-    </div>
-  );
-}
-
-const NumberDisplay = ({ number }: { number: string }) => {
-  return (
-    <div className="inline-flex flex-col items-center justify-center">
-      <div className="">{number}</div>
-    </div>
-  );
-}
-
-function getOperationIcon(operation: string) {
-  switch (operation) {
-    case "add":
-      return <FaPlus/>
-    case "subtract":
-      return <FaMinus/>
-    case "multiply":
-      return <FaTimes/>
-    case "divide":
-      return <FaDivide/>
-    default:
-      return <FaQuestion/>
-  }
-}
+import {Problem} from "../types";
+import {FaEquals} from "react-icons/fa6";
+import {FractionDisplay} from "./FractionDisplay.tsx";
+import {NumberDisplay} from "./NumberDisplay.tsx";
+import {getOperationIcon} from "./utils.tsx";
 
 const ProblemDisplay = ({ problems, selectedProblem, setSelectedProblem }: { problems: Problem[], selectedProblem: Problem | null, setSelectedProblem: (problem: Problem) => void }) => {
   return (

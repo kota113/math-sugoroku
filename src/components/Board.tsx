@@ -2,6 +2,8 @@ import React from 'react';
 import {BLOCKS} from "../blocks.ts";
 import {PathWay} from "../types.ts";
 import './Board.css'
+import {FaDivide} from "react-icons/fa6";
+import {FaExclamationTriangle} from "react-icons/fa";
 
 function listPathWayBlocks(pathWay: PathWay) {
   const pathWayBlocks = [];
@@ -88,12 +90,18 @@ const Board = ({currentPosition, pathWays}: { currentPosition: number, pathWays:
             const nextPathWay = involvedPathWays[1];
             const imageSrc = nextPathWay ? 'bend.svg': 'straight.svg';
             const rotateClass = getRotation(currentPathWay, nextPathWay);
+            const filterClass = block.type == "normal"? `black-filter`: block.type == "event"? 'orange-filter': 'green-filter';
+            const bgColour = block.type == "normal"? 'bg-white': block.type == "event"? 'bg-orange-100': 'bg-green-100';
             return (
               <div
                 key={index}
-                className={`border-2 border-blue-400 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors ${currentPosition == blockIndex ? `bg-blue-300` : 'bg-white'}`}
+                className={`relative w-16 h-16 border-2 border-blue-400 rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors ${currentPosition == blockIndex+1 ? `bg-blue-300` : bgColour}`}
               >
-                <img alt={""} src={imageSrc} className={`w-14 h-14 ${rotateClass} orange-filter`}/>
+                <img alt={""} src={imageSrc} className={`absolute z-10 w-14 h-14 ${rotateClass} ${filterClass}`}/>
+                {
+                  block.type === "divide"? <FaDivide className={"absolute z-20 stroke-neutral-950"} color={"green"} size={35} />:
+                    block.type === "event"? <FaExclamationTriangle className={"absolute z-20 stroke-black"} style={{strokeWidth: 4}} color={"#ffb374"} size={35} />: null
+                }
               </div>
             )
         })}

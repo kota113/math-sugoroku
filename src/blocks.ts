@@ -333,7 +333,7 @@ export const BLOCKS: Block[] = [
   {
     id: 9,
     isVisible: true,
-    type: 'divide',
+    type: 'normal',
     onClick: () => {
     }
   },
@@ -354,7 +354,7 @@ export const BLOCKS: Block[] = [
   {
     id: 6,
     isVisible: true,
-    type: 'normal',
+    type: 'event',
     onClick: () => {
     }
   },

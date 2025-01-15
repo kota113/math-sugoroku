@@ -1,0 +1,58 @@
+{
+  "64": {
+    "id": 64,
+    "highlightPath": false,
+    "type": "multiply",
+    "firstNumber": "3",
+    "secondNumber": "2/3",
+    "answer": "2"
+  },
+  "91": {
+    "id": 91,
+    "highlightPath": false,
+    "type": "multiply",
+    "firstNumber": "5",
+    "secondNumber": "2/5",
+    "answer": "2"
+  },
+  "96": {
+    "id": 96,
+    "highlightPath": false,
+    "type": "multiply",
+    "firstNumber": "1/2",
+    "secondNumber": "6",
+    "answer": "3"
+  },
+  "19": {
+    "id": 19,
+    "highlightPath": false,
+    "type": "multiply",
+    "firstNumber": "12",
+    "secondNumber": "1/3",
+    "answer": "4"
+  },
+  "12": {
+    "id": 12,
+    "highlightPath": false,
+    "type": "multiply",
+    "firstNumber": "12",
+    "secondNumber": "1/3",
+    "answer": "4"
+  },
+  "42": {
+    "id": 42,
+    "highlightPath": false,
+    "type": "multiply",
+    "firstNumber": "10/22",
+    "secondNumber": "11/5",
+    "answer": "1"
+  },
+  "5": {
+    "id": 5,
+    "highlightPath": false,
+    "type": "multiply",
+    "firstNumber": "27/3",
+    "secondNumber": "9/81",
+    "answer": "1"
+  }
+}
