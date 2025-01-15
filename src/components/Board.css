@@ -1,0 +1,7 @@
+.orange-filter {
+    filter: invert(76%) sepia(87%) saturate(2304%) hue-rotate(355deg) brightness(99%) contrast(109%);
+}
+
+.green-filter {
+    filter: invert(56%) sepia(66%) saturate(2248%) hue-rotate(94deg) brightness(102%) contrast(103%)
+}

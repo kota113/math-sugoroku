@@ -1,0 +1,835 @@
+[
+  {
+    "id": 1,
+    "type": "divide",
+    "firstNumber": "28",
+    "secondNumber": "4",
+    "answer": "7.0"
+  },
+  {
+    "id": 2,
+    "type": "multiply",
+    "firstNumber": "6",
+    "secondNumber": "10",
+    "answer": "60"
+  },
+  {
+    "id": 3,
+    "type": "subtract",
+    "firstNumber": "5/7",
+    "secondNumber": "9/7",
+    "answer": "-4/7"
+  },
+  {
+    "id": 4,
+    "type": "add",
+    "firstNumber": "6",
+    "secondNumber": "16",
+    "answer": "22"
+  },
+  {
+    "id": 5,
+    "type": "subtract",
+    "firstNumber": "9/5",
+    "secondNumber": "5/2",
+    "answer": "-7/10"
+  },
+  {
+    "id": 6,
+    "type": "add",
+    "firstNumber": "5",
+    "secondNumber": "6",
+    "answer": "11"
+  },
+  {
+    "id": 7,
+    "type": "multiply",
+    "firstNumber": "4/3",
+    "secondNumber": "3/7",
+    "answer": "4/7"
+  },
+  {
+    "id": 8,
+    "type": "add",
+    "firstNumber": "2",
+    "secondNumber": "5",
+    "answer": "7"
+  },
+  {
+    "id": 9,
+    "type": "multiply",
+    "firstNumber": "8",
+    "secondNumber": "4",
+    "answer": "32"
+  },
+  {
+    "id": 10,
+    "type": "add",
+    "firstNumber": "8/9",
+    "secondNumber": "2/3",
+    "answer": "14/9"
+  },
+  {
+    "id": 11,
+    "type": "divide",
+    "firstNumber": "280",
+    "secondNumber": "20",
+    "answer": "14.0"
+  },
+  {
+    "id": 12,
+    "type": "divide",
+    "firstNumber": "1/5",
+    "secondNumber": "2/3",
+    "answer": "3/10"
+  },
+  {
+    "id": 13,
+    "type": "subtract",
+    "firstNumber": "16",
+    "secondNumber": "1",
+    "answer": "15"
+  },
+  {
+    "id": 14,
+    "type": "divide",
+    "firstNumber": "1/2",
+    "secondNumber": "1/4",
+    "answer": "2/1"
+  },
+  {
+    "id": 15,
+    "type": "add",
+    "firstNumber": "6",
+    "secondNumber": "10",
+    "answer": "16"
+  },
+  {
+    "id": 16,
+    "type": "subtract",
+    "firstNumber": "20",
+    "secondNumber": "3",
+    "answer": "17"
+  },
+  {
+    "id": 17,
+    "type": "add",
+    "firstNumber": "2",
+    "secondNumber": "13",
+    "answer": "15"
+  },
+  {
+    "id": 18,
+    "type": "subtract",
+    "firstNumber": "16",
+    "secondNumber": "8",
+    "answer": "8"
+  },
+  {
+    "id": 19,
+    "type": "subtract",
+    "firstNumber": "14",
+    "secondNumber": "9",
+    "answer": "5"
+  },
+  {
+    "id": 20,
+    "type": "subtract",
+    "firstNumber": "15",
+    "secondNumber": "13",
+    "answer": "2"
+  },
+  {
+    "id": 21,
+    "type": "multiply",
+    "firstNumber": "3",
+    "secondNumber": "5",
+    "answer": "15"
+  },
+  {
+    "id": 22,
+    "type": "add",
+    "firstNumber": "2/7",
+    "secondNumber": "8/3",
+    "answer": "62/21"
+  },
+  {
+    "id": 23,
+    "type": "subtract",
+    "firstNumber": "7/2",
+    "secondNumber": "1/8",
+    "answer": "27/8"
+  },
+  {
+    "id": 24,
+    "type": "divide",
+    "firstNumber": "64",
+    "secondNumber": "4",
+    "answer": "16.0"
+  },
+  {
+    "id": 25,
+    "type": "multiply",
+    "firstNumber": "5",
+    "secondNumber": "14",
+    "answer": "70"
+  },
+  {
+    "id": 26,
+    "type": "multiply",
+    "firstNumber": "9",
+    "secondNumber": "2",
+    "answer": "18"
+  },
+  {
+    "id": 27,
+    "type": "multiply",
+    "firstNumber": "6/7",
+    "secondNumber": "7/5",
+    "answer": "6/5"
+  },
+  {
+    "id": 28,
+    "type": "divide",
+    "firstNumber": "15",
+    "secondNumber": "3",
+    "answer": "5.0"
+  },
+  {
+    "id": 29,
+    "type": "subtract",
+    "firstNumber": "20",
+    "secondNumber": "18",
+    "answer": "2"
+  },
+  {
+    "id": 30,
+    "type": "add",
+    "firstNumber": "1/7",
+    "secondNumber": "7/5",
+    "answer": "54/35"
+  },
+  {
+    "id": 31,
+    "type": "subtract",
+    "firstNumber": "3/4",
+    "secondNumber": "3/1",
+    "answer": "-9/4"
+  },
+  {
+    "id": 32,
+    "type": "subtract",
+    "firstNumber": "6",
+    "secondNumber": "5",
+    "answer": "1"
+  },
+  {
+    "id": 33,
+    "type": "add",
+    "firstNumber": "5/8",
+    "secondNumber": "4/9",
+    "answer": "77/72"
+  },
+  {
+    "id": 34,
+    "type": "divide",
+    "firstNumber": "162",
+    "secondNumber": "18",
+    "answer": "9.0"
+  },
+  {
+    "id": 35,
+    "type": "subtract",
+    "firstNumber": "6",
+    "secondNumber": "1",
+    "answer": "5"
+  },
+  {
+    "id": 36,
+    "type": "add",
+    "firstNumber": "2",
+    "secondNumber": "2",
+    "answer": "4"
+  },
+  {
+    "id": 37,
+    "type": "add",
+    "firstNumber": "4/3",
+    "secondNumber": "9/5",
+    "answer": "47/15"
+  },
+  {
+    "id": 38,
+    "type": "multiply",
+    "firstNumber": "9/5",
+    "secondNumber": "3/1",
+    "answer": "27/5"
+  },
+  {
+    "id": 39,
+    "type": "subtract",
+    "firstNumber": "12",
+    "secondNumber": "9",
+    "answer": "3"
+  },
+  {
+    "id": 40,
+    "type": "multiply",
+    "firstNumber": "17",
+    "secondNumber": "8",
+    "answer": "136"
+  },
+  {
+    "id": 41,
+    "type": "multiply",
+    "firstNumber": "6",
+    "secondNumber": "3",
+    "answer": "18"
+  },
+  {
+    "id": 42,
+    "type": "multiply",
+    "firstNumber": "7/5",
+    "secondNumber": "7/6",
+    "answer": "49/30"
+  },
+  {
+    "id": 43,
+    "type": "divide",
+    "firstNumber": "10",
+    "secondNumber": "10",
+    "answer": "1.0"
+  },
+  {
+    "id": 44,
+    "type": "divide",
+    "firstNumber": "7/2",
+    "secondNumber": "8/3",
+    "answer": "21/16"
+  },
+  {
+    "id": 45,
+    "type": "multiply",
+    "firstNumber": "8/3",
+    "secondNumber": "1/1",
+    "answer": "8/3"
+  },
+  {
+    "id": 46,
+    "type": "subtract",
+    "firstNumber": "11",
+    "secondNumber": "7",
+    "answer": "4"
+  },
+  {
+    "id": 47,
+    "type": "add",
+    "firstNumber": "5/4",
+    "secondNumber": "6/5",
+    "answer": "49/20"
+  },
+  {
+    "id": 48,
+    "type": "divide",
+    "firstNumber": "10",
+    "secondNumber": "10",
+    "answer": "1.0"
+  },
+  {
+    "id": 49,
+    "type": "multiply",
+    "firstNumber": "9",
+    "secondNumber": "9",
+    "answer": "81"
+  },
+  {
+    "id": 50,
+    "type": "divide",
+    "firstNumber": "320",
+    "secondNumber": "20",
+    "answer": "16.0"
+  },
+  {
+    "id": 51,
+    "type": "divide",
+    "firstNumber": "119",
+    "secondNumber": "7",
+    "answer": "17.0"
+  },
+  {
+    "id": 52,
+    "type": "add",
+    "firstNumber": "9",
+    "secondNumber": "19",
+    "answer": "28"
+  },
+  {
+    "id": 53,
+    "type": "add",
+    "firstNumber": "10",
+    "secondNumber": "9",
+    "answer": "19"
+  },
+  {
+    "id": 54,
+    "type": "multiply",
+    "firstNumber": "9/8",
+    "secondNumber": "2/3",
+    "answer": "3/4"
+  },
+  {
+    "id": 55,
+    "type": "subtract",
+    "firstNumber": "20",
+    "secondNumber": "11",
+    "answer": "9"
+  },
+  {
+    "id": 56,
+    "type": "add",
+    "firstNumber": "11",
+    "secondNumber": "15",
+    "answer": "26"
+  },
+  {
+    "id": 57,
+    "type": "add",
+    "firstNumber": "19",
+    "secondNumber": "18",
+    "answer": "37"
+  },
+  {
+    "id": 58,
+    "type": "multiply",
+    "firstNumber": "11",
+    "secondNumber": "11",
+    "answer": "121"
+  },
+  {
+    "id": 59,
+    "type": "multiply",
+    "firstNumber": "20",
+    "secondNumber": "9",
+    "answer": "180"
+  },
+  {
+    "id": 60,
+    "type": "multiply",
+    "firstNumber": "1",
+    "secondNumber": "20",
+    "answer": "20"
+  },
+  {
+    "id": 61,
+    "type": "multiply",
+    "firstNumber": "9",
+    "secondNumber": "20",
+    "answer": "180"
+  },
+  {
+    "id": 62,
+    "type": "divide",
+    "firstNumber": "160",
+    "secondNumber": "16",
+    "answer": "10.0"
+  },
+  {
+    "id": 63,
+    "type": "multiply",
+    "firstNumber": "1/6",
+    "secondNumber": "4/5",
+    "answer": "2/15"
+  },
+  {
+    "id": 64,
+    "type": "divide",
+    "firstNumber": "90",
+    "secondNumber": "5",
+    "answer": "18.0"
+  },
+  {
+    "id": 65,
+    "type": "multiply",
+    "firstNumber": "3",
+    "secondNumber": "8",
+    "answer": "24"
+  },
+  {
+    "id": 66,
+    "type": "multiply",
+    "firstNumber": "6",
+    "secondNumber": "13",
+    "answer": "78"
+  },
+  {
+    "id": 67,
+    "type": "subtract",
+    "firstNumber": "7",
+    "secondNumber": "2",
+    "answer": "5"
+  },
+  {
+    "id": 68,
+    "type": "subtract",
+    "firstNumber": "12",
+    "secondNumber": "10",
+    "answer": "2"
+  },
+  {
+    "id": 69,
+    "type": "add",
+    "firstNumber": "15",
+    "secondNumber": "16",
+    "answer": "31"
+  },
+  {
+    "id": 70,
+    "type": "divide",
+    "firstNumber": "121",
+    "secondNumber": "11",
+    "answer": "11.0"
+  },
+  {
+    "id": 71,
+    "type": "add",
+    "firstNumber": "2/3",
+    "secondNumber": "1/5",
+    "answer": "13/15"
+  },
+  {
+    "id": 72,
+    "type": "divide",
+    "firstNumber": "85",
+    "secondNumber": "5",
+    "answer": "17.0"
+  },
+  {
+    "id": 73,
+    "type": "divide",
+    "firstNumber": "3/1",
+    "secondNumber": "2/3",
+    "answer": "9/2"
+  },
+  {
+    "id": 74,
+    "type": "subtract",
+    "firstNumber": "13",
+    "secondNumber": "7",
+    "answer": "6"
+  },
+  {
+    "id": 75,
+    "type": "multiply",
+    "firstNumber": "6",
+    "secondNumber": "11",
+    "answer": "66"
+  },
+  {
+    "id": 76,
+    "type": "multiply",
+    "firstNumber": "11",
+    "secondNumber": "6",
+    "answer": "66"
+  },
+  {
+    "id": 77,
+    "type": "multiply",
+    "firstNumber": "9",
+    "secondNumber": "3",
+    "answer": "27"
+  },
+  {
+    "id": 78,
+    "type": "add",
+    "firstNumber": "13",
+    "secondNumber": "5",
+    "answer": "18"
+  },
+  {
+    "id": 79,
+    "type": "subtract",
+    "firstNumber": "16",
+    "secondNumber": "5",
+    "answer": "11"
+  },
+  {
+    "id": 80,
+    "type": "multiply",
+    "firstNumber": "1/1",
+    "secondNumber": "3/1",
+    "answer": "3/1"
+  },
+  {
+    "id": 81,
+    "type": "multiply",
+    "firstNumber": "3",
+    "secondNumber": "16",
+    "answer": "48"
+  },
+  {
+    "id": 82,
+    "type": "multiply",
+    "firstNumber": "12",
+    "secondNumber": "5",
+    "answer": "60"
+  },
+  {
+    "id": 83,
+    "type": "divide",
+    "firstNumber": "2/1",
+    "secondNumber": "1/9",
+    "answer": "18/1"
+  },
+  {
+    "id": 84,
+    "type": "multiply",
+    "firstNumber": "9",
+    "secondNumber": "1",
+    "answer": "9"
+  },
+  {
+    "id": 85,
+    "type": "multiply",
+    "firstNumber": "18",
+    "secondNumber": "7",
+    "answer": "126"
+  },
+  {
+    "id": 86,
+    "type": "divide",
+    "firstNumber": "2/1",
+    "secondNumber": "8/7",
+    "answer": "7/4"
+  },
+  {
+    "id": 87,
+    "type": "divide",
+    "firstNumber": "28",
+    "secondNumber": "7",
+    "answer": "4.0"
+  },
+  {
+    "id": 88,
+    "type": "multiply",
+    "firstNumber": "11",
+    "secondNumber": "13",
+    "answer": "143"
+  },
+  {
+    "id": 89,
+    "type": "multiply",
+    "firstNumber": "5",
+    "secondNumber": "6",
+    "answer": "30"
+  },
+  {
+    "id": 90,
+    "type": "subtract",
+    "firstNumber": "13",
+    "secondNumber": "13",
+    "answer": "0"
+  },
+  {
+    "id": 91,
+    "type": "add",
+    "firstNumber": "8",
+    "secondNumber": "17",
+    "answer": "25"
+  },
+  {
+    "id": 92,
+    "type": "multiply",
+    "firstNumber": "14",
+    "secondNumber": "11",
+    "answer": "154"
+  },
+  {
+    "id": 93,
+    "type": "add",
+    "firstNumber": "3",
+    "secondNumber": "17",
+    "answer": "20"
+  },
+  {
+    "id": 94,
+    "type": "divide",
+    "firstNumber": "40",
+    "secondNumber": "2",
+    "answer": "20.0"
+  },
+  {
+    "id": 95,
+    "type": "multiply",
+    "firstNumber": "2/7",
+    "secondNumber": "7/5",
+    "answer": "2/5"
+  },
+  {
+    "id": 96,
+    "type": "multiply",
+    "firstNumber": "15",
+    "secondNumber": "4",
+    "answer": "60"
+  },
+  {
+    "id": 97,
+    "type": "divide",
+    "firstNumber": "140",
+    "secondNumber": "14",
+    "answer": "10.0"
+  },
+  {
+    "id": 98,
+    "type": "subtract",
+    "firstNumber": "7/10",
+    "secondNumber": "1/1",
+    "answer": "-3/10"
+  },
+  {
+    "id": 99,
+    "type": "add",
+    "firstNumber": "20",
+    "secondNumber": "12",
+    "answer": "32"
+  },
+  {
+    "id": 100,
+    "type": "add",
+    "firstNumber": "10",
+    "secondNumber": "20",
+    "answer": "30"
+  },
+  {
+    "id": 101,
+    "type": "subtract",
+    "firstNumber": "3/5",
+    "secondNumber": "1/2",
+    "answer": "1/10"
+  },
+  {
+    "id": 102,
+    "type": "subtract",
+    "firstNumber": "1/7",
+    "secondNumber": "5/9",
+    "answer": "-26/63"
+  },
+  {
+    "id": 103,
+    "type": "multiply",
+    "firstNumber": "11",
+    "secondNumber": "14",
+    "answer": "154"
+  },
+  {
+    "id": 104,
+    "type": "subtract",
+    "firstNumber": "19",
+    "secondNumber": "1",
+    "answer": "18"
+  },
+  {
+    "id": 105,
+    "type": "divide",
+    "firstNumber": "13",
+    "secondNumber": "1",
+    "answer": "13.0"
+  },
+  {
+    "id": 106,
+    "type": "divide",
+    "firstNumber": "4",
+    "secondNumber": "2",
+    "answer": "2.0"
+  },
+  {
+    "id": 107,
+    "type": "divide",
+    "firstNumber": "2/5",
+    "secondNumber": "1/2",
+    "answer": "4/5"
+  },
+  {
+    "id": 108,
+    "type": "divide",
+    "firstNumber": "104",
+    "secondNumber": "13",
+    "answer": "8.0"
+  },
+  {
+    "id": 109,
+    "type": "multiply",
+    "firstNumber": "14",
+    "secondNumber": "7",
+    "answer": "98"
+  },
+  {
+    "id": 110,
+    "type": "subtract",
+    "firstNumber": "10",
+    "secondNumber": "5",
+    "answer": "5"
+  },
+  {
+    "id": 111,
+    "type": "add",
+    "firstNumber": "3/7",
+    "secondNumber": "1/1",
+    "answer": "10/7"
+  },
+  {
+    "id": 112,
+    "type": "divide",
+    "firstNumber": "7",
+    "secondNumber": "1",
+    "answer": "7.0"
+  },
+  {
+    "id": 113,
+    "type": "add",
+    "firstNumber": "9",
+    "secondNumber": "10",
+    "answer": "19"
+  },
+  {
+    "id": 114,
+    "type": "multiply",
+    "firstNumber": "10",
+    "secondNumber": "3",
+    "answer": "30"
+  },
+  {
+    "id": 115,
+    "type": "multiply",
+    "firstNumber": "4",
+    "secondNumber": "4",
+    "answer": "16"
+  },
+  {
+    "id": 116,
+    "type": "multiply",
+    "firstNumber": "10",
+    "secondNumber": "11",
+    "answer": "110"
+  },
+  {
+    "id": 117,
+    "type": "divide",
+    "firstNumber": "1/1",
+    "secondNumber": "1/1",
+    "answer": "1/1"
+  },
+  {
+    "id": 118,
+    "type": "multiply",
+    "firstNumber": "1",
+    "secondNumber": "9",
+    "answer": "9"
+  },
+  {
+    "id": 119,
+    "type": "subtract",
+    "firstNumber": "1/4",
+    "secondNumber": "1/1",
+    "answer": "-3/4"
+  }
+]

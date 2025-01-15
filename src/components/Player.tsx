@@ -1,16 +1,12 @@
 import React from 'react';
 
-interface PlayerProps {
-  name: string;
-  position: number;
-}
-
-const Player: React.FC<PlayerProps> = ({ name, position }) => {
+const PlayerInfo: React.FC = () => {
   return (
-    <div>
-      <p>{name} is at position {position}</p>
+    <div className="border-2 border-gray-400 p-4 w-full">
+      {/* Information about the current player */}
+      Player Info
     </div>
   );
 };
 
-export default Player;
+export default PlayerInfo;

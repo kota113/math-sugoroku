@@ -1,28 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-interface AnswerInputProps {
-  onSubmit: (answer: string) => void;
-}
-
-const AnswerInput: React.FC<AnswerInputProps> = ({ onSubmit }) => {
-  const [answer, setAnswer] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmit(answer);
-    setAnswer('');
-  };
-
+const AnswerInput = ({answer, setAnswer}: {answer: string, setAnswer: (answer: string) => void}) => {
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={answer}
-        onChange={(e) => setAnswer(e.target.value)}
-        placeholder="Enter your answer"
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="flex h-full border-2 border-gray-400 w-2/3 p-4 rounded-lg">
+      <input className={"w-full h-24 border-2 border-gray-700 text-xl text-center"} value={answer} onChange={(e) => setAnswer(e.target.value)}/>
+    </div>
   );
 };
 
