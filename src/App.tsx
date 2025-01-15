@@ -14,6 +14,7 @@ function App() {
   const gameManager = useMemo(() => new GameManager(BLOCKS, problemsData as Problem[], 1), [])
   const [problems, setProblems] = useState<Problem[]>([]);
   const [pathWays, setPathWays] = useState<PathWay[]>([]);
+  const [currentPlayer, setCurrentPlayer] = useState<number>(1);
   const [selectedProblem, setSelectedProblem] = useState<Problem | null>(null);
   const [currentPosition, setCurrentPosition] = useState<number>(0);
   const [answerBtnColour, setAnswerBtnColour] = useState<'green' | 'red'>('green');
@@ -22,15 +23,16 @@ function App() {
     setProblems(gameManager.getRandomProblems(2))
     setPathWays(gameManager.pathways)
     setCurrentPosition(1)
+    setCurrentPlayer(gameManager.currentPlayerId)
   }, [gameManager]);
   const moveGradually = (steps: number) => {
     let currentStep = 0;
     const interval = setInterval(() => {
       if (currentStep < steps) {
-        const newPositon = currentPosition + 1;
-        setCurrentPosition(newPositon);
+        const newPosition = currentPosition + 1;
+        setCurrentPosition((_) => newPosition);
         gameManager.movePlayer(1);
-        const block = BLOCKS.filter((block) => (block.id == newPositon))[0];
+        const block = BLOCKS.filter((block) => (block.id == newPosition))[0];
         if (block.type !== "normal") {
           clearInterval(interval);
           return;
@@ -69,7 +71,7 @@ function App() {
       <div className="w-4/5 flex max-w-screen-xl h-screen bg-white shadow-md rounded-lg overflow-hidden">
         {/* Player Info (Side Bar) */}
         <div className="flex w-1/4">
-          <PlayerInfo/>
+          <PlayerInfo playerId={currentPlayer}/>
         </div>
 
         {/* Main Game Area */}
