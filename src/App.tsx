@@ -29,14 +29,7 @@ function App() {
     let currentStep = 0;
     const interval = setInterval(() => {
       if (currentStep < steps) {
-        const newPosition = currentPosition + 1;
-        setCurrentPosition((_) => newPosition);
-        gameManager.movePlayer(1);
-        const block = BLOCKS.filter((block) => (block.id == newPosition))[0];
-        if (block.type !== "normal") {
-          clearInterval(interval);
-          return;
-        }
+        setCurrentPosition(prev => prev + 1);
         currentStep++;
       } else {
         clearInterval(interval);
@@ -78,7 +71,7 @@ function App() {
         <div className="flex flex-col w-3/4">
           <Board currentPosition={currentPosition} pathWays={pathWays}/>
           <div className={"flex flex-row justify-between"}>
-            {block.type == "divide" ? <SpecialProblemDisplay block={block}/> :
+            {block?.type == "divide" ? <SpecialProblemDisplay block={block}/> :
               <ProblemDisplay problems={problems} selectedProblem={selectedProblem}
                               setSelectedProblem={setSelectedProblem}/>
             }
@@ -95,8 +88,7 @@ function App() {
         </div>
       </div>
     </div>
-  )
-    ;
+  );
 }
 
 export default App;
