@@ -16,20 +16,29 @@ function App() {
   const [pathWays, setPathWays] = useState<PathWay[]>([]);
   const [currentPlayer, setCurrentPlayer] = useState<number>(1);
   const [selectedProblem, setSelectedProblem] = useState<Problem | null>(null);
-  const [currentPosition, setCurrentPosition] = useState<number>(0);
+  const [currentPosition, setCurrentPosition] = useState<Record<number, number>>({
+    0: 0,
+    1: 0
+  });
   const [answerBtnColour, setAnswerBtnColour] = useState<'green' | 'red'>('green');
   const [answerInput, setAnswerInput] = useState<string>("");
   useEffect(() => {
     setProblems(gameManager.getRandomProblems(2))
     setPathWays(gameManager.pathways)
-    setCurrentPosition(1)
+    setCurrentPosition({
+      0: 0,
+      1: 0
+    })
     setCurrentPlayer(gameManager.currentPlayerId)
-  }, [gameManager]);
+  }, [gameManager, gameManager.currentPlayerId]);
   const moveGradually = (steps: number) => {
     let currentStep = 0;
     const interval = setInterval(() => {
       if (currentStep < steps) {
-        setCurrentPosition(prev => prev + 1);
+        setCurrentPosition(prev => ({
+          ...prev,
+          [currentPlayer]: prev[currentPlayer] + 1
+        }));
         currentStep++;
       } else {
         clearInterval(interval);
@@ -45,19 +54,22 @@ function App() {
       // Handle correct answer
       moveGradually(Number(selectedProblem?.answer));
       gameManager.movePlayer(Number(selectedProblem?.answer));
+      gameManager.switchPlayer()
+      setCurrentPlayer((currentPlayer+1)%2)
       setProblems(gameManager.getRandomProblems(2))
     } else {
       // Handle incorrect answer
       setProblems(gameManager.getRandomProblems(2))
       setAnswerBtnColour("red")
       gameManager.switchPlayer()
+      setCurrentPlayer((currentPlayer+1)%2)
       setTimeout(() => {
         setAnswerBtnColour('green')
       }, 1000);
     }
   }
 
-  const block = BLOCKS.filter((block) => (block.id == currentPosition + 1))[0];
+  const block = BLOCKS.filter((block) => (block.id == currentPosition[currentPlayer]))[0];
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-start">
@@ -69,7 +81,7 @@ function App() {
 
         {/* Main Game Area */}
         <div className="flex flex-col w-3/4">
-          <Board currentPosition={currentPosition} pathWays={pathWays}/>
+          <Board currentPosition={currentPosition} pathWays={pathWays} currentPlayerId={currentPlayer}/>
           <div className={"flex flex-row justify-between"}>
             {block?.type == "divide" ? <SpecialProblemDisplay block={block}/> :
               <ProblemDisplay problems={problems} selectedProblem={selectedProblem}

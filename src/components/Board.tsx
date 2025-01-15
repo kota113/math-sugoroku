@@ -4,6 +4,7 @@ import {PathWay} from "../types.ts";
 import './Board.css'
 import {FaDivide} from "react-icons/fa6";
 import {FaExclamationTriangle} from "react-icons/fa";
+import player from "./Player.tsx";
 
 function listPathWayBlocks(pathWay: PathWay) {
   const pathWayBlocks = [];
@@ -69,7 +70,7 @@ function getRotation(currentPathWay: PathWay, nextPathWay: PathWay | null) {
   return rotateClass;
 }
 
-const Board = ({currentPosition, pathWays}: { currentPosition: number, pathWays: PathWay[] }) => {
+const Board = ({currentPosition, pathWays, currentPlayerId}: { currentPosition: Record<number, number>, pathWays: PathWay[], currentPlayerId: number }) => {
   if (pathWays.length === 0) return null;
   return (
     <div className="flex border-2 border-gray-400 p-4 w-full h-3/4 m-1 rounded-lg">
@@ -95,7 +96,7 @@ const Board = ({currentPosition, pathWays}: { currentPosition: number, pathWays:
             return (
               <div
                 key={index}
-                className={`relative w-16 h-16 border-2 border-blue-400 rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors ${currentPosition == blockIndex+1 ? `bg-blue-300` : bgColour}`}
+                className={`relative w-16 h-16 border-2 border-blue-400 rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors ${currentPosition[currentPlayerId] == blockIndex+1 ? `bg-blue-300` : bgColour}`}
               >
                 <img alt={""} src={imageSrc} className={`absolute z-10 w-14 h-14 ${rotateClass} ${filterClass}`}/>
                 {
