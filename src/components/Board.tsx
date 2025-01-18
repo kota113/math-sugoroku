@@ -2,8 +2,17 @@ import React from 'react';
 import {BLOCKS} from "../blocks.ts";
 import {PathWay} from "../types.ts";
 import './Board.css'
-import {FaDivide} from "react-icons/fa6";
-import {FaExclamationTriangle} from "react-icons/fa";
+import {FaAnglesUp, FaDivide} from "react-icons/fa6";
+
+const ringColors = {
+  0: 'border-red-500 border-4',
+  1: 'border-blue-500 border-4',
+  2: 'border-emerald-500 border-4',
+  3: 'border-purple-500 border-4',
+  4: 'border-amber-500 border-4',
+  5: 'border-fuchsia-500 border-4'
+}
+
 
 function listPathWayBlocks(pathWay: PathWay) {
   const pathWayBlocks = [];
@@ -95,7 +104,7 @@ const Board = ({currentPosition, pathWays, currentPlayerId}: {
         const rotateClass = getRotation(currentPathWay, nextPathWay);
         const filterClass = block.type == "normal" ? `black-filter` : block.type == "event" ? 'orange-filter' : 'green-filter';
         const bgColour = block.type == "normal" ? 'bg-white' : block.type == "event" ? 'bg-orange-100' : 'bg-green-100';
-        const ringColor =
+        let ringColor =
           currentPosition[0] == blockIndex ? 'border-red-500 border-4' :
             currentPosition[1] == blockIndex ? 'border-blue-500 border-4' :
               currentPosition[2] == blockIndex ? 'border-emerald-500 border-4' :
@@ -103,6 +112,7 @@ const Board = ({currentPosition, pathWays, currentPlayerId}: {
                   currentPosition[4] == blockIndex ? 'border-amber-500 border-4' :
                     currentPosition[5] == blockIndex ? 'border-fuchsia-500 border-4' :
                       'border-gray-500';
+        ringColor = currentPosition[currentPlayerId] == blockIndex ? ringColors[currentPlayerId] : ringColor
         const currentPlayerBg = currentPosition[currentPlayerId] == blockIndex ?
           currentPosition[0] == blockIndex ? 'bg-red-200' :
             currentPosition[1] == blockIndex ? 'bg-blue-200' :
@@ -110,7 +120,7 @@ const Board = ({currentPosition, pathWays, currentPlayerId}: {
                 currentPosition[3] == blockIndex ? 'bg-purple-200' :
                   currentPosition[4] == blockIndex ? 'bg-amber-200' :
                     currentPosition[5] == blockIndex ? 'bg-fuchsia-200' :
-                      'border-gray-500': ""
+                      'border-gray-500' : ""
         return (
           <div
             key={index}
@@ -121,8 +131,8 @@ const Board = ({currentPosition, pathWays, currentPlayerId}: {
               block.type === "divide" ?
                 <FaDivide className={"absolute z-20 stroke-neutral-950"} color={"green"} size={40}/> :
                 block.type === "event" ?
-                  <FaExclamationTriangle className={"absolute z-20 stroke-black"} style={{strokeWidth: 4}}
-                                         color={"#ffb374"} size={35}
+                  <FaAnglesUp className={"absolute z-20 stroke-black"} style={{strokeWidth: 4}}
+                              color={"#ffb374"} size={35}
                   /> : null
             }
           </div>

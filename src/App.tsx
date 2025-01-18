@@ -13,11 +13,13 @@ import data from "./assets/specialProblems.json";
 import generateProblems from "./components/utils/generateProblems.ts";
 import SwitchPlayerModal from "./components/modals/SwitchPlayerModal.tsx";
 import GameClearModal from "./components/modals/GameClearModal.tsx";
+import LevelUpModal from "./components/modals/LevelUpModal.tsx";
 
 function App() {
   const gameManager = useMemo(() => new GameManager(BLOCKS, problemsData as Problem[], 1), [])
   const [switchPlayerModalVisible, setSwitchPlayerModalVisible] = useState(false);
   const [gameClearModalVisible, setGameClearModalVisible] = useState(false);
+  const [levelUpModalVisible, setLevelUpModalVisible] = useState(false);
   const [problems, setProblems] = useState<Problem[]>([]);
   const [pathWays, setPathWays] = useState<PathWay[]>([]);
   const [currentPlayer, setCurrentPlayer] = useState<number>(0);
@@ -31,29 +33,32 @@ function App() {
   });
   const [answerBtnColour, setAnswerBtnColour] = useState<'green' | 'red'>('green');
   const [answerInput, setAnswerInput] = useState<string>("");
+  async function showLevelUpModal() {
+    setLevelUpModalVisible(true);
+    await sleep(1500);
+    setLevelUpModalVisible(false);
+  }
   useEffect(() => {
-    setProblems(generateProblems(level, 2))
     setPathWays(gameManager.pathways)
-    setCurrentPosition({
-      0: 0,
-      1: 0
-    })
-    setCurrentPlayer(0)
-  }, [gameManager, gameManager.currentPlayerId, level]);
+  }, [gameManager]);
   useEffect(() => {
     async function _() {
       const block = BLOCKS[currentPosition[currentPlayer]];
       setBlock(block);
       setSpecialProblem(data[currentPosition[currentPlayer]]??null as Problem|null)
-      const level = currentPosition[currentPlayer] >= 15? 'normal': currentPosition[currentPlayer] >= 50? 'hard': 'easy'
-      setLevel(level)
-      setProblems(generateProblems(level, 2))
+      const newLevel = currentPosition[currentPlayer] >= 15? 'normal': currentPosition[currentPlayer] >= 50? 'hard': 'easy'
+      if (level != newLevel) {
+        // todo: チーム切り替わり時にも反応しそう。修正する
+        await showLevelUpModal();
+      }
+      setLevel(newLevel)
+      setProblems(generateProblems(newLevel, 2))
       if (currentPosition[currentPlayer] >= 49) {
         setGameClearModalVisible(true);
       }
     }
     _().then();
-  }, [currentPlayer, currentPosition, gameManager]);
+  }, [currentPlayer, currentPosition, gameManager, level]);
   const moveGradually = (steps: number) => {
     let currentStep = 0;
     const interval = setInterval(() => {
@@ -76,7 +81,7 @@ function App() {
     let moveForwardCount = parseInt(correctAnswer);
     // if there's a block with the type "divide" or "event" in the way, reduce the moveForwardCount to the number of blocks in the way
     // todo: 負の数に対応する
-    const divideBlocks = BLOCKS.filter((block, index) => (block.type === "divide" || block.type === "event")&&index>currentPosition[currentPlayer]&&index<=currentPosition[currentPlayer]+parseInt(correctAnswer));
+    const divideBlocks = BLOCKS.filter((block, index) => (block.type === "divide")&&index>currentPosition[currentPlayer]&&index<=currentPosition[currentPlayer]+parseInt(correctAnswer));
     if (divideBlocks.length > 0) {
       moveForwardCount = BLOCKS.findIndex((block) => block == divideBlocks[0]) - currentPosition[currentPlayer]
     }
@@ -127,6 +132,7 @@ function App() {
           </div>
         </div>
       </div>
+      <LevelUpModal isVisible={levelUpModalVisible}/>
       <GameClearModal playerName={currentPlayer.toString()} isVisible={gameClearModalVisible}/>
       <SwitchPlayerModal playerName={currentPlayer.toString()} isVisible={switchPlayerModalVisible}/>
     </div>
