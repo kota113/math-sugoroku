@@ -7,9 +7,9 @@ import {getOperationIcon} from "./utils.tsx";
 
 const ProblemDisplay = ({ problems, selectedProblem, setSelectedProblem }: { problems: Problem[], selectedProblem: Problem | null, setSelectedProblem: (problem: Problem) => void }) => {
   return (
-    <div className="flex flex-wrap border-2 border-gray-400 w-3/4 m-1 rounded-lg h-full">
+    <div className="flex flex-wrap w-3/4 m-1 rounded-lg h-full bg-red-50 border-red-400 border-4">
       {problems.map((problem) => (
-        <div className="flex justify-around w-full h-1/2 items-center" key={problem.id}>
+        <div className="flex justify-around w-full h-1/2 items-center text-3xl text-center" key={problem.id}>
           <input
             type="radio"
             className="flex w-1/6"
@@ -28,9 +28,6 @@ const ProblemDisplay = ({ problems, selectedProblem, setSelectedProblem }: { pro
           <div className={"flex w-1/6"}>
             <FaEquals/>
           </div>
-          {/*<div className={"flex"}>*/}
-          {/*  {problem.answer.includes("/") ? <FractionDisplay fraction={problem.answer}/> : problem.answer}*/}
-          {/*</div>*/}
         </div>
       ))}
     </div>

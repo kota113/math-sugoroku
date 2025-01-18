@@ -11,11 +11,13 @@ import {FaArrowRight, FaX} from "react-icons/fa6";
 import SpecialProblemDisplay from "./components/SpecialProblemDisplay.tsx";
 import data from "./assets/specialProblems.json";
 import generateProblems from "./components/utils/generateProblems.ts";
-import SwitchPlayerModal from "./components/SwitchPlayerModal.tsx";
+import SwitchPlayerModal from "./components/modals/SwitchPlayerModal.tsx";
+import GameClearModal from "./components/modals/GameClearModal.tsx";
 
 function App() {
   const gameManager = useMemo(() => new GameManager(BLOCKS, problemsData as Problem[], 1), [])
   const [switchPlayerModalVisible, setSwitchPlayerModalVisible] = useState(false);
+  const [gameClearModalVisible, setGameClearModalVisible] = useState(false);
   const [problems, setProblems] = useState<Problem[]>([]);
   const [pathWays, setPathWays] = useState<PathWay[]>([]);
   const [currentPlayer, setCurrentPlayer] = useState<number>(0);
@@ -46,6 +48,9 @@ function App() {
       const level = currentPosition[currentPlayer] >= 15? 'normal': currentPosition[currentPlayer] >= 50? 'hard': 'easy'
       setLevel(level)
       setProblems(generateProblems(level, 2))
+      if (currentPosition[currentPlayer] >= 49) {
+        setGameClearModalVisible(true);
+      }
     }
     _().then();
   }, [currentPlayer, currentPosition, gameManager]);
@@ -100,14 +105,10 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-gray-100 flex justify-center items-start">
-      <div className="w-4/5 flex max-w-screen-xl h-screen bg-white shadow-md rounded-lg overflow-hidden">
-        {/* Player Info (Side Bar) */}
-        <div className="flex w-1/4">
-          <PlayerInfo playerId={currentPlayer}/>
-        </div>
-
+      <div className="flex max-w-screen-2xl h-screen bg-white shadow-md rounded-lg overflow-hidden">
         {/* Main Game Area */}
-        <div className="flex flex-col w-3/4">
+        <div className="flex flex-col w-full">
+          <PlayerInfo playerId={currentPlayer}/>
           <Board currentPosition={currentPosition} pathWays={pathWays} currentPlayerId={currentPlayer} />
           <div className={"flex flex-row justify-between"}>
             {block?.type == "divide" ? <SpecialProblemDisplay problem={specialProblem}/> :
@@ -118,7 +119,7 @@ function App() {
               <AnswerInput answer={answerInput} setAnswer={setAnswerInput}/>
               <div
                 onClick={answerProblem}
-                className={`flex h-full w-1/4 ${answerBtnColour == 'green' ? "bg-green-500" : "bg-red-500"} rounded-xl mx-2 items-center justify-center cursor-pointer transition-all`}>
+                className={`flex m-1 h-full w-1/4 ${answerBtnColour == 'green' ? "bg-green-500" : "bg-red-500"} rounded-xl items-center justify-center cursor-pointer transition-all`}>
                 {answerBtnColour == "green" ? <FaArrowRight color={"white"} size={18}/> :
                   <FaX color={"white"} size={18}/>}
               </div>
@@ -126,6 +127,7 @@ function App() {
           </div>
         </div>
       </div>
+      <GameClearModal playerName={currentPlayer.toString()} isVisible={gameClearModalVisible}/>
       <SwitchPlayerModal playerName={currentPlayer.toString()} isVisible={switchPlayerModalVisible}/>
     </div>
   );

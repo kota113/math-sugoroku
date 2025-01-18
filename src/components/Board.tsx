@@ -76,7 +76,7 @@ const Board = ({currentPosition, pathWays, currentPlayerId}: {
 }) => {
   if (pathWays.length === 0) return null;
   return (
-    <div className="grid grid-cols-12 gap-1 border-2 border-gray-400 p-4 w-full h-3/4 m-1 rounded-lg">
+    <div className="grid grid-cols-12 gap-1 border-8 border-yellow-400 bg-yellow-50 p-4 w-full h-3/4 rounded-xl">
       {[...Array(96)].map((_, index) => {
         const block = BLOCKS.filter((block) => (block.id == index + 1))?.[0];
         if (!block) return (
@@ -95,12 +95,28 @@ const Board = ({currentPosition, pathWays, currentPlayerId}: {
         const rotateClass = getRotation(currentPathWay, nextPathWay);
         const filterClass = block.type == "normal" ? `black-filter` : block.type == "event" ? 'orange-filter' : 'green-filter';
         const bgColour = block.type == "normal" ? 'bg-white' : block.type == "event" ? 'bg-orange-100' : 'bg-green-100';
+        const ringColor =
+          currentPosition[0] == blockIndex ? 'border-red-500 border-4' :
+            currentPosition[1] == blockIndex ? 'border-blue-500 border-4' :
+              currentPosition[2] == blockIndex ? 'border-emerald-500 border-4' :
+                currentPosition[3] == blockIndex ? 'border-purple-500 border-4' :
+                  currentPosition[4] == blockIndex ? 'border-amber-500 border-4' :
+                    currentPosition[5] == blockIndex ? 'border-fuchsia-500 border-4' :
+                      'border-gray-500';
+        const currentPlayerBg = currentPosition[currentPlayerId] == blockIndex ?
+          currentPosition[0] == blockIndex ? 'bg-red-200' :
+            currentPosition[1] == blockIndex ? 'bg-blue-200' :
+              currentPosition[2] == blockIndex ? 'bg-emerald-200' :
+                currentPosition[3] == blockIndex ? 'bg-purple-200' :
+                  currentPosition[4] == blockIndex ? 'bg-amber-200' :
+                    currentPosition[5] == blockIndex ? 'bg-fuchsia-200' :
+                      'border-gray-500': ""
         return (
           <div
             key={index}
-            className={`relative w-16 h-16 border-2 border-blue-400 rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors ${currentPosition[currentPlayerId] == blockIndex ? `bg-blue-300` : bgColour}`}
+            className={`relative w-16 h-16 border-2 ${ringColor} rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors ${currentPosition[currentPlayerId] == blockIndex ? currentPlayerBg : bgColour}`}
           >
-            <img alt={""} src={imageSrc} className={`absolute z-10 w-14 h-14 ${rotateClass} ${filterClass}`}/>
+            <img alt={""} src={imageSrc} className={`absolute z-10 w-16 h-16 ${rotateClass} ${filterClass}`}/>
             {
               block.type === "divide" ?
                 <FaDivide className={"absolute z-20 stroke-neutral-950"} color={"green"} size={40}/> :
