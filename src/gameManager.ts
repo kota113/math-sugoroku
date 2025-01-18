@@ -93,11 +93,14 @@ export class GameManager {
     }
   }
 
-  getRandomProblems(count: number) {
-    const randomIds = [...Array(count)].map(() =>
-      Math.floor(Math.random() * 119) + 1  // 1から10までの範囲
-    )
-    return this.problems.filter((problem) => randomIds.includes(problem.id) )
+  getRandomProblems(count: number, level: number) {
+    const levelStr = level === 1? 'normal': level === 2? 'hard': 'easy'
+    console.log(levelStr)
+    const filteredProblems = this.problems.filter((problem) => problem.level == levelStr)
+    return [...Array(count)].map(() => {
+      const randomIndex = Math.floor(Math.random() * filteredProblems.length)
+      return filteredProblems[randomIndex]
+    })
   }
 
   switchPlayer() {

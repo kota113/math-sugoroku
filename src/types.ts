@@ -19,4 +19,5 @@ export interface Problem {
   firstNumber: string
   secondNumber: string
   answer: string
+  level?: 'easy' | 'normal' | 'hard'
 }

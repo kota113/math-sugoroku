@@ -13,7 +13,7 @@ const ProblemDisplay = ({ problems, selectedProblem, setSelectedProblem }: { pro
           <input
             type="radio"
             className="flex w-1/6"
-            checked={selectedProblem?.id === problem.id}
+            checked={selectedProblem == problem}
             onChange={() => setSelectedProblem(problem)}
           />
           <div className={"flex w-1/4"}>

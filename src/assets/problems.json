@@ -1,835 +1,962 @@
 [
   {
     "id": 1,
-    "type": "divide",
-    "firstNumber": "28",
-    "secondNumber": "4",
-    "answer": "7.0"
+    "type": "add",
+    "firstNumber": "8",
+    "secondNumber": "1",
+    "answer": "9",
+    "level": "easy"
   },
   {
     "id": 2,
-    "type": "multiply",
-    "firstNumber": "6",
-    "secondNumber": "10",
-    "answer": "60"
+    "type": "subtract",
+    "firstNumber": "9",
+    "secondNumber": "2",
+    "answer": "7",
+    "level": "easy"
   },
   {
     "id": 3,
-    "type": "subtract",
-    "firstNumber": "5/7",
-    "secondNumber": "9/7",
-    "answer": "-4/7"
+    "type": "add",
+    "firstNumber": "1",
+    "secondNumber": "1",
+    "answer": "2",
+    "level": "easy"
   },
   {
     "id": 4,
-    "type": "add",
-    "firstNumber": "6",
-    "secondNumber": "16",
-    "answer": "22"
+    "type": "divide",
+    "firstNumber": "5",
+    "secondNumber": "4",
+    "answer": "1",
+    "level": "easy"
   },
   {
     "id": 5,
-    "type": "subtract",
-    "firstNumber": "9/5",
-    "secondNumber": "5/2",
-    "answer": "-7/10"
+    "type": "multiply",
+    "firstNumber": "2",
+    "secondNumber": "5",
+    "answer": "10",
+    "level": "easy"
   },
   {
     "id": 6,
-    "type": "add",
-    "firstNumber": "5",
-    "secondNumber": "6",
-    "answer": "11"
+    "type": "multiply",
+    "firstNumber": "1",
+    "secondNumber": "10",
+    "answer": "10",
+    "level": "easy"
   },
   {
     "id": 7,
-    "type": "multiply",
-    "firstNumber": "4/3",
-    "secondNumber": "3/7",
-    "answer": "4/7"
+    "type": "divide",
+    "firstNumber": "10",
+    "secondNumber": "7",
+    "answer": "1",
+    "level": "easy"
   },
   {
     "id": 8,
-    "type": "add",
-    "firstNumber": "2",
-    "secondNumber": "5",
-    "answer": "7"
+    "type": "multiply",
+    "firstNumber": "5",
+    "secondNumber": "2",
+    "answer": "10",
+    "level": "easy"
   },
   {
     "id": 9,
-    "type": "multiply",
-    "firstNumber": "8",
-    "secondNumber": "4",
-    "answer": "32"
+    "type": "divide",
+    "firstNumber": "4",
+    "secondNumber": "1",
+    "answer": "4",
+    "level": "easy"
   },
   {
     "id": 10,
-    "type": "add",
-    "firstNumber": "8/9",
-    "secondNumber": "2/3",
-    "answer": "14/9"
+    "type": "divide",
+    "firstNumber": "6",
+    "secondNumber": "1",
+    "answer": "6",
+    "level": "easy"
   },
   {
     "id": 11,
-    "type": "divide",
-    "firstNumber": "280",
-    "secondNumber": "20",
-    "answer": "14.0"
+    "type": "multiply",
+    "firstNumber": "5",
+    "secondNumber": "2",
+    "answer": "10",
+    "level": "easy"
   },
   {
     "id": 12,
     "type": "divide",
-    "firstNumber": "1/5",
-    "secondNumber": "2/3",
-    "answer": "3/10"
+    "firstNumber": "4",
+    "secondNumber": "1",
+    "answer": "4",
+    "level": "easy"
   },
   {
     "id": 13,
     "type": "subtract",
-    "firstNumber": "16",
-    "secondNumber": "1",
-    "answer": "15"
+    "firstNumber": "4",
+    "secondNumber": "2",
+    "answer": "2",
+    "level": "easy"
   },
   {
     "id": 14,
-    "type": "divide",
-    "firstNumber": "1/2",
-    "secondNumber": "1/4",
-    "answer": "2/1"
+    "type": "subtract",
+    "firstNumber": "10",
+    "secondNumber": "6",
+    "answer": "4",
+    "level": "easy"
   },
   {
     "id": 15,
-    "type": "add",
+    "type": "divide",
     "firstNumber": "6",
-    "secondNumber": "10",
-    "answer": "16"
+    "secondNumber": "3",
+    "answer": "2",
+    "level": "easy"
   },
   {
     "id": 16,
-    "type": "subtract",
-    "firstNumber": "20",
-    "secondNumber": "3",
-    "answer": "17"
+    "type": "divide",
+    "firstNumber": "6",
+    "secondNumber": "1",
+    "answer": "6",
+    "level": "easy"
   },
   {
     "id": 17,
-    "type": "add",
-    "firstNumber": "2",
-    "secondNumber": "13",
-    "answer": "15"
+    "type": "multiply",
+    "firstNumber": "9",
+    "secondNumber": "1",
+    "answer": "9",
+    "level": "easy"
   },
   {
     "id": 18,
-    "type": "subtract",
-    "firstNumber": "16",
-    "secondNumber": "8",
-    "answer": "8"
+    "type": "divide",
+    "firstNumber": "9",
+    "secondNumber": "1",
+    "answer": "9",
+    "level": "easy"
   },
   {
     "id": 19,
-    "type": "subtract",
-    "firstNumber": "14",
-    "secondNumber": "9",
-    "answer": "5"
+    "type": "divide",
+    "firstNumber": "8",
+    "secondNumber": "6",
+    "answer": "1",
+    "level": "easy"
   },
   {
     "id": 20,
     "type": "subtract",
-    "firstNumber": "15",
-    "secondNumber": "13",
-    "answer": "2"
+    "firstNumber": "7",
+    "secondNumber": "6",
+    "answer": "1",
+    "level": "easy"
   },
   {
     "id": 21,
     "type": "multiply",
-    "firstNumber": "3",
+    "firstNumber": "1",
     "secondNumber": "5",
-    "answer": "15"
+    "answer": "5",
+    "level": "easy"
   },
   {
     "id": 22,
-    "type": "add",
-    "firstNumber": "2/7",
-    "secondNumber": "8/3",
-    "answer": "62/21"
+    "type": "divide",
+    "firstNumber": "7",
+    "secondNumber": "3",
+    "answer": "2",
+    "level": "easy"
   },
   {
     "id": 23,
     "type": "subtract",
-    "firstNumber": "7/2",
-    "secondNumber": "1/8",
-    "answer": "27/8"
+    "firstNumber": "9",
+    "secondNumber": "9",
+    "answer": "0",
+    "level": "easy"
   },
   {
     "id": 24,
-    "type": "divide",
-    "firstNumber": "64",
-    "secondNumber": "4",
-    "answer": "16.0"
+    "type": "subtract",
+    "firstNumber": "10",
+    "secondNumber": "7",
+    "answer": "3",
+    "level": "easy"
   },
   {
     "id": 25,
-    "type": "multiply",
-    "firstNumber": "5",
-    "secondNumber": "14",
-    "answer": "70"
+    "type": "subtract",
+    "firstNumber": "9",
+    "secondNumber": "8",
+    "answer": "1",
+    "level": "easy"
   },
   {
     "id": 26,
     "type": "multiply",
-    "firstNumber": "9",
-    "secondNumber": "2",
-    "answer": "18"
+    "firstNumber": "1",
+    "secondNumber": "3",
+    "answer": "3",
+    "level": "easy"
   },
   {
     "id": 27,
-    "type": "multiply",
-    "firstNumber": "6/7",
-    "secondNumber": "7/5",
-    "answer": "6/5"
+    "type": "divide",
+    "firstNumber": "1",
+    "secondNumber": "5",
+    "answer": "0",
+    "level": "easy"
   },
   {
     "id": 28,
-    "type": "divide",
-    "firstNumber": "15",
-    "secondNumber": "3",
-    "answer": "5.0"
+    "type": "add",
+    "firstNumber": "5",
+    "secondNumber": "1",
+    "answer": "6",
+    "level": "easy"
   },
   {
     "id": 29,
-    "type": "subtract",
-    "firstNumber": "20",
-    "secondNumber": "18",
-    "answer": "2"
+    "type": "divide",
+    "firstNumber": "4",
+    "secondNumber": "6",
+    "answer": "0",
+    "level": "easy"
   },
   {
     "id": 30,
-    "type": "add",
-    "firstNumber": "1/7",
-    "secondNumber": "7/5",
-    "answer": "54/35"
+    "type": "divide",
+    "firstNumber": "7",
+    "secondNumber": "7",
+    "answer": "1",
+    "level": "easy"
   },
   {
     "id": 31,
-    "type": "subtract",
-    "firstNumber": "3/4",
-    "secondNumber": "3/1",
-    "answer": "-9/4"
+    "type": "divide",
+    "firstNumber": "8",
+    "secondNumber": "1",
+    "answer": "8",
+    "level": "easy"
   },
   {
     "id": 32,
-    "type": "subtract",
-    "firstNumber": "6",
-    "secondNumber": "5",
-    "answer": "1"
+    "type": "divide",
+    "firstNumber": "4",
+    "secondNumber": "2",
+    "answer": "2",
+    "level": "easy"
   },
   {
     "id": 33,
-    "type": "add",
-    "firstNumber": "5/8",
-    "secondNumber": "4/9",
-    "answer": "77/72"
+    "type": "divide",
+    "firstNumber": "7",
+    "secondNumber": "4",
+    "answer": "1",
+    "level": "easy"
   },
   {
     "id": 34,
-    "type": "divide",
-    "firstNumber": "162",
-    "secondNumber": "18",
-    "answer": "9.0"
+    "type": "subtract",
+    "firstNumber": "10",
+    "secondNumber": "2",
+    "answer": "8",
+    "level": "easy"
   },
   {
     "id": 35,
-    "type": "subtract",
+    "type": "add",
     "firstNumber": "6",
-    "secondNumber": "1",
-    "answer": "5"
+    "secondNumber": "3",
+    "answer": "9",
+    "level": "easy"
   },
   {
     "id": 36,
-    "type": "add",
+    "type": "divide",
     "firstNumber": "2",
-    "secondNumber": "2",
-    "answer": "4"
+    "secondNumber": "3",
+    "answer": "0",
+    "level": "easy"
   },
   {
     "id": 37,
     "type": "add",
-    "firstNumber": "4/3",
-    "secondNumber": "9/5",
-    "answer": "47/15"
+    "firstNumber": "2",
+    "secondNumber": "7",
+    "answer": "9",
+    "level": "easy"
   },
   {
     "id": 38,
-    "type": "multiply",
-    "firstNumber": "9/5",
-    "secondNumber": "3/1",
-    "answer": "27/5"
+    "type": "add",
+    "firstNumber": "5",
+    "secondNumber": "5",
+    "answer": "10",
+    "level": "easy"
   },
   {
     "id": 39,
     "type": "subtract",
-    "firstNumber": "12",
-    "secondNumber": "9",
-    "answer": "3"
+    "firstNumber": "9",
+    "secondNumber": "5",
+    "answer": "4",
+    "level": "easy"
   },
   {
     "id": 40,
-    "type": "multiply",
-    "firstNumber": "17",
+    "type": "divide",
+    "firstNumber": "2",
     "secondNumber": "8",
-    "answer": "136"
+    "answer": "0",
+    "level": "easy"
   },
   {
     "id": 41,
     "type": "multiply",
-    "firstNumber": "6",
-    "secondNumber": "3",
-    "answer": "18"
+    "firstNumber": "2/5",
+    "secondNumber": "1/5",
+    "answer": "2/25",
+    "level": "normal"
   },
   {
     "id": 42,
     "type": "multiply",
-    "firstNumber": "7/5",
-    "secondNumber": "7/6",
-    "answer": "49/30"
+    "firstNumber": "7/6",
+    "secondNumber": "9/6",
+    "answer": "7/4",
+    "level": "normal"
   },
   {
     "id": 43,
     "type": "divide",
-    "firstNumber": "10",
-    "secondNumber": "10",
-    "answer": "1.0"
+    "firstNumber": "3/2",
+    "secondNumber": "6/2",
+    "answer": "1/2",
+    "level": "normal"
   },
   {
     "id": 44,
-    "type": "divide",
-    "firstNumber": "7/2",
-    "secondNumber": "8/3",
-    "answer": "21/16"
+    "type": "subtract",
+    "firstNumber": "6/4",
+    "secondNumber": "3/4",
+    "answer": "3/4",
+    "level": "normal"
   },
   {
     "id": 45,
-    "type": "multiply",
-    "firstNumber": "8/3",
-    "secondNumber": "1/1",
-    "answer": "8/3"
+    "type": "add",
+    "firstNumber": "9/5",
+    "secondNumber": "3/5",
+    "answer": "12/5",
+    "level": "normal"
   },
   {
     "id": 46,
-    "type": "subtract",
-    "firstNumber": "11",
-    "secondNumber": "7",
-    "answer": "4"
+    "type": "divide",
+    "firstNumber": "2/9",
+    "secondNumber": "10/9",
+    "answer": "1/5",
+    "level": "normal"
   },
   {
     "id": 47,
-    "type": "add",
-    "firstNumber": "5/4",
-    "secondNumber": "6/5",
-    "answer": "49/20"
+    "type": "multiply",
+    "firstNumber": "8/2",
+    "secondNumber": "5/2",
+    "answer": "10/1",
+    "level": "normal"
   },
   {
     "id": 48,
     "type": "divide",
-    "firstNumber": "10",
-    "secondNumber": "10",
-    "answer": "1.0"
+    "firstNumber": "3/10",
+    "secondNumber": "2/10",
+    "answer": "3/2",
+    "level": "normal"
   },
   {
     "id": 49,
     "type": "multiply",
-    "firstNumber": "9",
-    "secondNumber": "9",
-    "answer": "81"
+    "firstNumber": "7/4",
+    "secondNumber": "7/4",
+    "answer": "49/16",
+    "level": "normal"
   },
   {
     "id": 50,
-    "type": "divide",
-    "firstNumber": "320",
-    "secondNumber": "20",
-    "answer": "16.0"
+    "type": "subtract",
+    "firstNumber": "4/7",
+    "secondNumber": "3/7",
+    "answer": "1/7",
+    "level": "normal"
   },
   {
     "id": 51,
-    "type": "divide",
-    "firstNumber": "119",
-    "secondNumber": "7",
-    "answer": "17.0"
+    "type": "add",
+    "firstNumber": "9/2",
+    "secondNumber": "5/2",
+    "answer": "7/1",
+    "level": "normal"
   },
   {
     "id": 52,
-    "type": "add",
-    "firstNumber": "9",
-    "secondNumber": "19",
-    "answer": "28"
+    "type": "subtract",
+    "firstNumber": "4/2",
+    "secondNumber": "6/2",
+    "answer": "-1/1",
+    "level": "normal"
   },
   {
     "id": 53,
     "type": "add",
-    "firstNumber": "10",
-    "secondNumber": "9",
-    "answer": "19"
+    "firstNumber": "2/9",
+    "secondNumber": "2/9",
+    "answer": "4/9",
+    "level": "normal"
   },
   {
     "id": 54,
-    "type": "multiply",
-    "firstNumber": "9/8",
-    "secondNumber": "2/3",
-    "answer": "3/4"
+    "type": "subtract",
+    "firstNumber": "3/7",
+    "secondNumber": "7/7",
+    "answer": "-4/7",
+    "level": "normal"
   },
   {
     "id": 55,
-    "type": "subtract",
-    "firstNumber": "20",
-    "secondNumber": "11",
-    "answer": "9"
+    "type": "add",
+    "firstNumber": "8/8",
+    "secondNumber": "3/8",
+    "answer": "11/8",
+    "level": "normal"
   },
   {
     "id": 56,
-    "type": "add",
-    "firstNumber": "11",
-    "secondNumber": "15",
-    "answer": "26"
+    "type": "divide",
+    "firstNumber": "10/4",
+    "secondNumber": "3/4",
+    "answer": "10/3",
+    "level": "normal"
   },
   {
     "id": 57,
-    "type": "add",
-    "firstNumber": "19",
-    "secondNumber": "18",
-    "answer": "37"
+    "type": "multiply",
+    "firstNumber": "5/4",
+    "secondNumber": "9/4",
+    "answer": "45/16",
+    "level": "normal"
   },
   {
     "id": 58,
-    "type": "multiply",
-    "firstNumber": "11",
-    "secondNumber": "11",
-    "answer": "121"
+    "type": "add",
+    "firstNumber": "5/5",
+    "secondNumber": "10/5",
+    "answer": "3/1",
+    "level": "normal"
   },
   {
     "id": 59,
-    "type": "multiply",
-    "firstNumber": "20",
-    "secondNumber": "9",
-    "answer": "180"
+    "type": "add",
+    "firstNumber": "1/4",
+    "secondNumber": "3/4",
+    "answer": "1/1",
+    "level": "normal"
   },
   {
     "id": 60,
-    "type": "multiply",
-    "firstNumber": "1",
-    "secondNumber": "20",
-    "answer": "20"
+    "type": "subtract",
+    "firstNumber": "9/6",
+    "secondNumber": "5/6",
+    "answer": "2/3",
+    "level": "normal"
   },
   {
     "id": 61,
     "type": "multiply",
-    "firstNumber": "9",
-    "secondNumber": "20",
-    "answer": "180"
+    "firstNumber": "2/10",
+    "secondNumber": "2/10",
+    "answer": "1/25",
+    "level": "normal"
   },
   {
     "id": 62,
-    "type": "divide",
-    "firstNumber": "160",
-    "secondNumber": "16",
-    "answer": "10.0"
+    "type": "multiply",
+    "firstNumber": "9/7",
+    "secondNumber": "1/7",
+    "answer": "9/49",
+    "level": "normal"
   },
   {
     "id": 63,
     "type": "multiply",
-    "firstNumber": "1/6",
-    "secondNumber": "4/5",
-    "answer": "2/15"
+    "firstNumber": "8/5",
+    "secondNumber": "9/5",
+    "answer": "72/25",
+    "level": "normal"
   },
   {
     "id": 64,
-    "type": "divide",
-    "firstNumber": "90",
-    "secondNumber": "5",
-    "answer": "18.0"
+    "type": "subtract",
+    "firstNumber": "6/4",
+    "secondNumber": "6/4",
+    "answer": "0/1",
+    "level": "normal"
   },
   {
     "id": 65,
-    "type": "multiply",
-    "firstNumber": "3",
-    "secondNumber": "8",
-    "answer": "24"
+    "type": "subtract",
+    "firstNumber": "10/5",
+    "secondNumber": "6/5",
+    "answer": "4/5",
+    "level": "normal"
   },
   {
     "id": 66,
-    "type": "multiply",
-    "firstNumber": "6",
-    "secondNumber": "13",
-    "answer": "78"
+    "type": "divide",
+    "firstNumber": "3/3",
+    "secondNumber": "10/3",
+    "answer": "3/10",
+    "level": "normal"
   },
   {
     "id": 67,
     "type": "subtract",
-    "firstNumber": "7",
-    "secondNumber": "2",
-    "answer": "5"
+    "firstNumber": "10/7",
+    "secondNumber": "1/7",
+    "answer": "9/7",
+    "level": "normal"
   },
   {
     "id": 68,
-    "type": "subtract",
-    "firstNumber": "12",
-    "secondNumber": "10",
-    "answer": "2"
+    "type": "multiply",
+    "firstNumber": "1/3",
+    "secondNumber": "8/3",
+    "answer": "8/9",
+    "level": "normal"
   },
   {
     "id": 69,
-    "type": "add",
-    "firstNumber": "15",
-    "secondNumber": "16",
-    "answer": "31"
+    "type": "subtract",
+    "firstNumber": "6/3",
+    "secondNumber": "9/3",
+    "answer": "-1/1",
+    "level": "normal"
   },
   {
     "id": 70,
     "type": "divide",
-    "firstNumber": "121",
-    "secondNumber": "11",
-    "answer": "11.0"
+    "firstNumber": "9/7",
+    "secondNumber": "4/7",
+    "answer": "9/4",
+    "level": "normal"
   },
   {
     "id": 71,
-    "type": "add",
-    "firstNumber": "2/3",
-    "secondNumber": "1/5",
-    "answer": "13/15"
+    "type": "divide",
+    "firstNumber": "10/4",
+    "secondNumber": "2/4",
+    "answer": "5/1",
+    "level": "normal"
   },
   {
     "id": 72,
     "type": "divide",
-    "firstNumber": "85",
-    "secondNumber": "5",
-    "answer": "17.0"
+    "firstNumber": "7/2",
+    "secondNumber": "10/2",
+    "answer": "7/10",
+    "level": "normal"
   },
   {
     "id": 73,
-    "type": "divide",
-    "firstNumber": "3/1",
-    "secondNumber": "2/3",
-    "answer": "9/2"
+    "type": "add",
+    "firstNumber": "3/6",
+    "secondNumber": "4/6",
+    "answer": "7/6",
+    "level": "normal"
   },
   {
     "id": 74,
-    "type": "subtract",
-    "firstNumber": "13",
-    "secondNumber": "7",
-    "answer": "6"
+    "type": "add",
+    "firstNumber": "9/3",
+    "secondNumber": "10/3",
+    "answer": "19/3",
+    "level": "normal"
   },
   {
     "id": 75,
-    "type": "multiply",
-    "firstNumber": "6",
-    "secondNumber": "11",
-    "answer": "66"
+    "type": "divide",
+    "firstNumber": "9/4",
+    "secondNumber": "1/4",
+    "answer": "9/1",
+    "level": "normal"
   },
   {
     "id": 76,
-    "type": "multiply",
-    "firstNumber": "11",
-    "secondNumber": "6",
-    "answer": "66"
+    "type": "subtract",
+    "firstNumber": "6/4",
+    "secondNumber": "1/4",
+    "answer": "5/4",
+    "level": "normal"
   },
   {
     "id": 77,
-    "type": "multiply",
-    "firstNumber": "9",
-    "secondNumber": "3",
-    "answer": "27"
+    "type": "divide",
+    "firstNumber": "4/1",
+    "secondNumber": "2/1",
+    "answer": "2/1",
+    "level": "normal"
   },
   {
     "id": 78,
-    "type": "add",
-    "firstNumber": "13",
-    "secondNumber": "5",
-    "answer": "18"
+    "type": "subtract",
+    "firstNumber": "3/2",
+    "secondNumber": "1/2",
+    "answer": "1/1",
+    "level": "normal"
   },
   {
     "id": 79,
     "type": "subtract",
-    "firstNumber": "16",
-    "secondNumber": "5",
-    "answer": "11"
+    "firstNumber": "6/7",
+    "secondNumber": "3/7",
+    "answer": "3/7",
+    "level": "normal"
   },
   {
     "id": 80,
-    "type": "multiply",
-    "firstNumber": "1/1",
-    "secondNumber": "3/1",
-    "answer": "3/1"
+    "type": "subtract",
+    "firstNumber": "9/3",
+    "secondNumber": "8/3",
+    "answer": "1/3",
+    "level": "normal"
   },
   {
     "id": 81,
-    "type": "multiply",
-    "firstNumber": "3",
-    "secondNumber": "16",
-    "answer": "48"
+    "type": "subtract",
+    "firstNumber": "16/11",
+    "secondNumber": "5/10",
+    "answer": "21/22",
+    "level": "hard"
   },
   {
     "id": 82,
-    "type": "multiply",
-    "firstNumber": "12",
-    "secondNumber": "5",
-    "answer": "60"
+    "type": "divide",
+    "firstNumber": "20/3",
+    "secondNumber": "14/9",
+    "answer": "30/7",
+    "level": "hard"
   },
   {
     "id": 83,
     "type": "divide",
-    "firstNumber": "2/1",
-    "secondNumber": "1/9",
-    "answer": "18/1"
+    "firstNumber": "3/19",
+    "secondNumber": "18/11",
+    "answer": "11/114",
+    "level": "hard"
   },
   {
     "id": 84,
-    "type": "multiply",
-    "firstNumber": "9",
-    "secondNumber": "1",
-    "answer": "9"
+    "type": "add",
+    "firstNumber": "14/9",
+    "secondNumber": "10/6",
+    "answer": "29/9",
+    "level": "hard"
   },
   {
     "id": 85,
     "type": "multiply",
-    "firstNumber": "18",
-    "secondNumber": "7",
-    "answer": "126"
+    "firstNumber": "20/18",
+    "secondNumber": "7/17",
+    "answer": "70/153",
+    "level": "hard"
   },
   {
     "id": 86,
     "type": "divide",
-    "firstNumber": "2/1",
-    "secondNumber": "8/7",
-    "answer": "7/4"
+    "firstNumber": "14/10",
+    "secondNumber": "7/16",
+    "answer": "16/5",
+    "level": "hard"
   },
   {
     "id": 87,
-    "type": "divide",
-    "firstNumber": "28",
-    "secondNumber": "7",
-    "answer": "4.0"
+    "type": "multiply",
+    "firstNumber": "17/3",
+    "secondNumber": "20/13",
+    "answer": "340/39",
+    "level": "hard"
   },
   {
     "id": 88,
-    "type": "multiply",
-    "firstNumber": "11",
-    "secondNumber": "13",
-    "answer": "143"
+    "type": "add",
+    "firstNumber": "2/10",
+    "secondNumber": "4/10",
+    "answer": "3/5",
+    "level": "hard"
   },
   {
     "id": 89,
-    "type": "multiply",
-    "firstNumber": "5",
-    "secondNumber": "6",
-    "answer": "30"
+    "type": "add",
+    "firstNumber": "6/14",
+    "secondNumber": "3/2",
+    "answer": "27/14",
+    "level": "hard"
   },
   {
     "id": 90,
-    "type": "subtract",
-    "firstNumber": "13",
-    "secondNumber": "13",
-    "answer": "0"
+    "type": "multiply",
+    "firstNumber": "9/1",
+    "secondNumber": "14/14",
+    "answer": "9/1",
+    "level": "hard"
   },
   {
     "id": 91,
-    "type": "add",
-    "firstNumber": "8",
-    "secondNumber": "17",
-    "answer": "25"
+    "type": "subtract",
+    "firstNumber": "17/8",
+    "secondNumber": "14/11",
+    "answer": "75/88",
+    "level": "hard"
   },
   {
     "id": 92,
-    "type": "multiply",
-    "firstNumber": "14",
-    "secondNumber": "11",
-    "answer": "154"
+    "type": "add",
+    "firstNumber": "15/19",
+    "secondNumber": "13/4",
+    "answer": "307/76",
+    "level": "hard"
   },
   {
     "id": 93,
     "type": "add",
-    "firstNumber": "3",
-    "secondNumber": "17",
-    "answer": "20"
+    "firstNumber": "14/15",
+    "secondNumber": "13/20",
+    "answer": "19/12",
+    "level": "hard"
   },
   {
     "id": 94,
     "type": "divide",
-    "firstNumber": "40",
-    "secondNumber": "2",
-    "answer": "20.0"
+    "firstNumber": "12/14",
+    "secondNumber": "13/10",
+    "answer": "60/91",
+    "level": "hard"
   },
   {
     "id": 95,
-    "type": "multiply",
-    "firstNumber": "2/7",
-    "secondNumber": "7/5",
-    "answer": "2/5"
+    "type": "divide",
+    "firstNumber": "14/10",
+    "secondNumber": "5/17",
+    "answer": "119/25",
+    "level": "hard"
   },
   {
     "id": 96,
-    "type": "multiply",
-    "firstNumber": "15",
-    "secondNumber": "4",
-    "answer": "60"
+    "type": "subtract",
+    "firstNumber": "10/19",
+    "secondNumber": "12/5",
+    "answer": "-178/95",
+    "level": "hard"
   },
   {
     "id": 97,
-    "type": "divide",
-    "firstNumber": "140",
-    "secondNumber": "14",
-    "answer": "10.0"
+    "type": "subtract",
+    "firstNumber": "13/10",
+    "secondNumber": "7/9",
+    "answer": "47/90",
+    "level": "hard"
   },
   {
     "id": 98,
-    "type": "subtract",
-    "firstNumber": "7/10",
-    "secondNumber": "1/1",
-    "answer": "-3/10"
+    "type": "add",
+    "firstNumber": "5/13",
+    "secondNumber": "18/13",
+    "answer": "23/13",
+    "level": "hard"
   },
   {
     "id": 99,
-    "type": "add",
-    "firstNumber": "20",
-    "secondNumber": "12",
-    "answer": "32"
+    "type": "multiply",
+    "firstNumber": "7/10",
+    "secondNumber": "8/17",
+    "answer": "28/85",
+    "level": "hard"
   },
   {
     "id": 100,
     "type": "add",
-    "firstNumber": "10",
-    "secondNumber": "20",
-    "answer": "30"
+    "firstNumber": "19/5",
+    "secondNumber": "5/16",
+    "answer": "329/80",
+    "level": "hard"
   },
   {
     "id": 101,
-    "type": "subtract",
-    "firstNumber": "3/5",
-    "secondNumber": "1/2",
-    "answer": "1/10"
+    "type": "add",
+    "firstNumber": "5/15",
+    "secondNumber": "3/9",
+    "answer": "2/3",
+    "level": "hard"
   },
   {
     "id": 102,
-    "type": "subtract",
-    "firstNumber": "1/7",
-    "secondNumber": "5/9",
-    "answer": "-26/63"
+    "type": "divide",
+    "firstNumber": "4/9",
+    "secondNumber": "10/8",
+    "answer": "16/45",
+    "level": "hard"
   },
   {
     "id": 103,
-    "type": "multiply",
-    "firstNumber": "11",
-    "secondNumber": "14",
-    "answer": "154"
+    "type": "add",
+    "firstNumber": "12/10",
+    "secondNumber": "7/10",
+    "answer": "19/10",
+    "level": "hard"
   },
   {
     "id": 104,
     "type": "subtract",
-    "firstNumber": "19",
-    "secondNumber": "1",
-    "answer": "18"
+    "firstNumber": "5/20",
+    "secondNumber": "11/14",
+    "answer": "-15/28",
+    "level": "hard"
   },
   {
     "id": 105,
-    "type": "divide",
-    "firstNumber": "13",
-    "secondNumber": "1",
-    "answer": "13.0"
+    "type": "multiply",
+    "firstNumber": "19/7",
+    "secondNumber": "20/10",
+    "answer": "38/7",
+    "level": "hard"
   },
   {
     "id": 106,
-    "type": "divide",
-    "firstNumber": "4",
-    "secondNumber": "2",
-    "answer": "2.0"
+    "type": "multiply",
+    "firstNumber": "14/10",
+    "secondNumber": "1/10",
+    "answer": "7/50",
+    "level": "hard"
   },
   {
     "id": 107,
     "type": "divide",
-    "firstNumber": "2/5",
-    "secondNumber": "1/2",
-    "answer": "4/5"
+    "firstNumber": "13/5",
+    "secondNumber": "17/6",
+    "answer": "78/85",
+    "level": "hard"
   },
   {
     "id": 108,
-    "type": "divide",
-    "firstNumber": "104",
-    "secondNumber": "13",
-    "answer": "8.0"
+    "type": "multiply",
+    "firstNumber": "12/18",
+    "secondNumber": "13/2",
+    "answer": "13/3",
+    "level": "hard"
   },
   {
     "id": 109,
     "type": "multiply",
-    "firstNumber": "14",
-    "secondNumber": "7",
-    "answer": "98"
+    "firstNumber": "2/16",
+    "secondNumber": "2/13",
+    "answer": "1/52",
+    "level": "hard"
   },
   {
     "id": 110,
-    "type": "subtract",
-    "firstNumber": "10",
-    "secondNumber": "5",
-    "answer": "5"
+    "type": "add",
+    "firstNumber": "13/19",
+    "secondNumber": "12/18",
+    "answer": "77/57",
+    "level": "hard"
   },
   {
     "id": 111,
     "type": "add",
-    "firstNumber": "3/7",
-    "secondNumber": "1/1",
-    "answer": "10/7"
+    "firstNumber": "18/2",
+    "secondNumber": "18/20",
+    "answer": "99/10",
+    "level": "hard"
   },
   {
     "id": 112,
     "type": "divide",
-    "firstNumber": "7",
-    "secondNumber": "1",
-    "answer": "7.0"
+    "firstNumber": "5/11",
+    "secondNumber": "5/11",
+    "answer": "1/1",
+    "level": "hard"
   },
   {
     "id": 113,
     "type": "add",
-    "firstNumber": "9",
-    "secondNumber": "10",
-    "answer": "19"
+    "firstNumber": "20/8",
+    "secondNumber": "8/19",
+    "answer": "111/38",
+    "level": "hard"
   },
   {
     "id": 114,
-    "type": "multiply",
-    "firstNumber": "10",
-    "secondNumber": "3",
-    "answer": "30"
+    "type": "divide",
+    "firstNumber": "15/6",
+    "secondNumber": "20/6",
+    "answer": "3/4",
+    "level": "hard"
   },
   {
     "id": 115,
     "type": "multiply",
-    "firstNumber": "4",
-    "secondNumber": "4",
-    "answer": "16"
+    "firstNumber": "16/11",
+    "secondNumber": "8/8",
+    "answer": "16/11",
+    "level": "hard"
   },
   {
     "id": 116,
-    "type": "multiply",
-    "firstNumber": "10",
-    "secondNumber": "11",
-    "answer": "110"
+    "type": "add",
+    "firstNumber": "6/18",
+    "secondNumber": "3/3",
+    "answer": "4/3",
+    "level": "hard"
   },
   {
     "id": 117,
-    "type": "divide",
-    "firstNumber": "1/1",
-    "secondNumber": "1/1",
-    "answer": "1/1"
+    "type": "add",
+    "firstNumber": "18/10",
+    "secondNumber": "1/8",
+    "answer": "77/40",
+    "level": "hard"
   },
   {
     "id": 118,
     "type": "multiply",
-    "firstNumber": "1",
-    "secondNumber": "9",
-    "answer": "9"
+    "firstNumber": "3/5",
+    "secondNumber": "19/15",
+    "answer": "19/25",
+    "level": "hard"
   },
   {
     "id": 119,
-    "type": "subtract",
-    "firstNumber": "1/4",
-    "secondNumber": "1/1",
-    "answer": "-3/4"
+    "type": "multiply",
+    "firstNumber": "6/3",
+    "secondNumber": "11/14",
+    "answer": "11/7",
+    "level": "hard"
+  },
+  {
+    "id": 120,
+    "type": "divide",
+    "firstNumber": "4/11",
+    "secondNumber": "13/3",
+    "answer": "12/143",
+    "level": "hard"
   }
 ]

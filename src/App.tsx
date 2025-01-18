@@ -5,16 +5,23 @@ import Board from "./components/Board.tsx";
 import {GameManager} from "./gameManager.ts";
 import {BLOCKS} from "./blocks.ts";
 import problemsData from './assets/problems.json'
-import {PathWay, Problem} from "./types.ts";
+import {Block, PathWay, Problem} from "./types.ts";
 import {useEffect, useMemo, useState} from "react";
 import {FaArrowRight, FaX} from "react-icons/fa6";
 import SpecialProblemDisplay from "./components/SpecialProblemDisplay.tsx";
+import data from "./assets/specialProblems.json";
+import generateProblems from "./components/utils/generateProblems.ts";
+import SwitchPlayerModal from "./components/SwitchPlayerModal.tsx";
 
 function App() {
   const gameManager = useMemo(() => new GameManager(BLOCKS, problemsData as Problem[], 1), [])
+  const [switchPlayerModalVisible, setSwitchPlayerModalVisible] = useState(false);
   const [problems, setProblems] = useState<Problem[]>([]);
   const [pathWays, setPathWays] = useState<PathWay[]>([]);
-  const [currentPlayer, setCurrentPlayer] = useState<number>(1);
+  const [currentPlayer, setCurrentPlayer] = useState<number>(0);
+  const [specialProblem, setSpecialProblem] = useState<Problem | null>(null);
+  const [block, setBlock] = useState<Block>();
+  const [level, setLevel] = useState<'easy' | 'normal' | 'hard'>('easy');
   const [selectedProblem, setSelectedProblem] = useState<Problem | null>(null);
   const [currentPosition, setCurrentPosition] = useState<Record<number, number>>({
     0: 0,
@@ -23,14 +30,25 @@ function App() {
   const [answerBtnColour, setAnswerBtnColour] = useState<'green' | 'red'>('green');
   const [answerInput, setAnswerInput] = useState<string>("");
   useEffect(() => {
-    setProblems(gameManager.getRandomProblems(2))
+    setProblems(generateProblems(level, 2))
     setPathWays(gameManager.pathways)
     setCurrentPosition({
       0: 0,
       1: 0
     })
-    setCurrentPlayer(gameManager.currentPlayerId)
-  }, [gameManager, gameManager.currentPlayerId]);
+    setCurrentPlayer(0)
+  }, [gameManager, gameManager.currentPlayerId, level]);
+  useEffect(() => {
+    async function _() {
+      const block = BLOCKS[currentPosition[currentPlayer]];
+      setBlock(block);
+      setSpecialProblem(data[currentPosition[currentPlayer]]??null as Problem|null)
+      const level = currentPosition[currentPlayer] >= 15? 'normal': currentPosition[currentPlayer] >= 50? 'hard': 'easy'
+      setLevel(level)
+      setProblems(generateProblems(level, 2))
+    }
+    _().then();
+  }, [currentPlayer, currentPosition, gameManager]);
   const moveGradually = (steps: number) => {
     let currentStep = 0;
     const interval = setInterval(() => {
@@ -46,33 +64,42 @@ function App() {
     }, 200); // 200ms between each step
   };
 
-  function answerProblem() {
-    const correctAnswer = selectedProblem?.answer;
+  const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+  async function answerProblem() {
+    const correctAnswer = !specialProblem? selectedProblem?.answer : specialProblem.answer;
+    let moveForwardCount = parseInt(correctAnswer);
+    // if there's a block with the type "divide" or "event" in the way, reduce the moveForwardCount to the number of blocks in the way
+    // todo: 負の数に対応する
+    const divideBlocks = BLOCKS.filter((block, index) => (block.type === "divide" || block.type === "event")&&index>currentPosition[currentPlayer]&&index<=currentPosition[currentPlayer]+parseInt(correctAnswer));
+    if (divideBlocks.length > 0) {
+      moveForwardCount = BLOCKS.findIndex((block) => block == divideBlocks[0]) - currentPosition[currentPlayer]
+    }
     setAnswerInput("");
     setSelectedProblem(null);
     if (answerInput == correctAnswer) {
       // Handle correct answer
-      moveGradually(Number(selectedProblem?.answer));
-      gameManager.movePlayer(Number(selectedProblem?.answer));
-      gameManager.switchPlayer()
+      moveGradually(moveForwardCount);
+      await sleep(moveForwardCount*200+1000);
       setCurrentPlayer((currentPlayer+1)%2)
-      setProblems(gameManager.getRandomProblems(2))
+      // setProblems(gameManager.getRandomProblems(2, level))
     } else {
       // Handle incorrect answer
-      setProblems(gameManager.getRandomProblems(2))
+      // setProblems(gameManager.getRandomProblems(2, level))
       setAnswerBtnColour("red")
-      gameManager.switchPlayer()
+      await sleep(moveForwardCount*200+500);
       setCurrentPlayer((currentPlayer+1)%2)
       setTimeout(() => {
         setAnswerBtnColour('green')
       }, 1000);
     }
+    setSwitchPlayerModalVisible(true);
+    await sleep(1500);
+    setSwitchPlayerModalVisible(false);
   }
 
-  const block = BLOCKS.filter((block) => (block.id == currentPosition[currentPlayer]))[0];
-
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center items-start">
+    <div className="relative min-h-screen bg-gray-100 flex justify-center items-start">
       <div className="w-4/5 flex max-w-screen-xl h-screen bg-white shadow-md rounded-lg overflow-hidden">
         {/* Player Info (Side Bar) */}
         <div className="flex w-1/4">
@@ -81,9 +108,9 @@ function App() {
 
         {/* Main Game Area */}
         <div className="flex flex-col w-3/4">
-          <Board currentPosition={currentPosition} pathWays={pathWays} currentPlayerId={currentPlayer}/>
+          <Board currentPosition={currentPosition} pathWays={pathWays} currentPlayerId={currentPlayer} />
           <div className={"flex flex-row justify-between"}>
-            {block?.type == "divide" ? <SpecialProblemDisplay block={block}/> :
+            {block?.type == "divide" ? <SpecialProblemDisplay problem={specialProblem}/> :
               <ProblemDisplay problems={problems} selectedProblem={selectedProblem}
                               setSelectedProblem={setSelectedProblem}/>
             }
@@ -99,6 +126,7 @@ function App() {
           </div>
         </div>
       </div>
+      <SwitchPlayerModal playerName={currentPlayer.toString()} isVisible={switchPlayerModalVisible}/>
     </div>
   );
 }
