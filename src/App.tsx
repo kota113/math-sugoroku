@@ -14,6 +14,7 @@ import generateProblems from "./components/utils/generateProblems.ts";
 import SwitchPlayerModal from "./components/modals/SwitchPlayerModal.tsx";
 import GameClearModal from "./components/modals/GameClearModal.tsx";
 import LevelUpModal from "./components/modals/LevelUpModal.tsx";
+import PlayerCount from "./components/PlayerCountInput.tsx";
 
 function App() {
   const gameManager = useMemo(() => new GameManager(BLOCKS, problemsData as Problem[], 1), [])
@@ -27,10 +28,7 @@ function App() {
   const [block, setBlock] = useState<Block>();
   const [level, setLevel] = useState<'easy' | 'normal' | 'hard'>('easy');
   const [selectedProblem, setSelectedProblem] = useState<Problem | null>(null);
-  const [currentPosition, setCurrentPosition] = useState<Record<number, number>>({
-    0: 67,
-    1: 67
-  });
+  const [currentPosition, setCurrentPosition] = useState<Record<number, number>>({});
   const [answerBtnColour, setAnswerBtnColour] = useState<'green' | 'red'>('green');
   const [answerInput, setAnswerInput] = useState<string>("");
   async function showLevelUpModal() {
@@ -110,33 +108,47 @@ function App() {
   }
 
   return (
-    <div className="relative min-h-screen bg-gray-100 flex justify-center items-start">
-      <div className="flex max-w-screen-2xl h-screen bg-white shadow-md rounded-lg overflow-hidden">
-        {/* Main Game Area */}
-        <div className="flex flex-col w-full">
-          <PlayerInfo playerId={currentPlayer}/>
-          <Board currentPosition={currentPosition} pathWays={pathWays} currentPlayerId={currentPlayer} />
-          <div className={"flex flex-row justify-between"}>
-            {block?.type == "divide" ? <SpecialProblemDisplay problem={specialProblem}/> :
-              <ProblemDisplay problems={problems} selectedProblem={selectedProblem}
-                              setSelectedProblem={setSelectedProblem}/>
-            }
-            <div className={"flex w-1/4"}>
-              <AnswerInput answer={answerInput} setAnswer={setAnswerInput}/>
-              <div
-                onClick={answerProblem}
-                className={`flex m-1 h-full w-1/4 ${answerBtnColour == 'green' ? "bg-green-500" : "bg-red-500"} rounded-xl items-center justify-center cursor-pointer transition-all`}>
-                {answerBtnColour == "green" ? <FaArrowRight color={"white"} size={18}/> :
-                  <FaX color={"white"} size={18}/>}
+    <>
+      {Object.keys(currentPosition).length == 0?
+        <PlayerCount setPlayerCount={(count: number) => setCurrentPosition(
+          {
+            0: 0,
+            ...[...Array(count - 1)].reduce((acc, _, index) => {
+              acc[index + 1] = 0
+              return acc
+            }, {})
+          }
+        )}/>
+        :
+        <div className="relative min-h-screen bg-gray-100 flex justify-center items-start">
+          <div className="flex max-w-screen-2xl h-screen bg-white shadow-md rounded-lg overflow-hidden">
+            {/* Main Game Area */}
+            <div className="flex flex-col w-full">
+              <PlayerInfo playerId={currentPlayer}/>
+              <Board currentPosition={currentPosition} pathWays={pathWays} currentPlayerId={currentPlayer} />
+              <div className={"flex flex-row justify-between"}>
+                {block?.type == "divide" ? <SpecialProblemDisplay problem={specialProblem}/> :
+                  <ProblemDisplay problems={problems} selectedProblem={selectedProblem}
+                                  setSelectedProblem={setSelectedProblem}/>
+                }
+                <div className={"flex w-1/4"}>
+                  <AnswerInput answer={answerInput} setAnswer={setAnswerInput}/>
+                  <div
+                    onClick={answerProblem}
+                    className={`flex m-1 h-full w-1/4 ${answerBtnColour == 'green' ? "bg-green-500" : "bg-red-500"} rounded-xl items-center justify-center cursor-pointer transition-all`}>
+                    {answerBtnColour == "green" ? <FaArrowRight color={"white"} size={18}/> :
+                      <FaX color={"white"} size={18}/>}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <LevelUpModal isVisible={levelUpModalVisible}/>
+          <GameClearModal playerName={gameClearedPlayer[0]?.toString()} isVisible={gameClearedPlayer.length > 0}/>
+          <SwitchPlayerModal playerName={currentPlayer.toString()} isVisible={switchPlayerModalVisible && gameClearedPlayer.length == 0}/>
         </div>
-      </div>
-      <LevelUpModal isVisible={levelUpModalVisible}/>
-      <GameClearModal playerName={gameClearedPlayer[0]?.toString()} isVisible={gameClearedPlayer.length > 0}/>
-      <SwitchPlayerModal playerName={currentPlayer.toString()} isVisible={switchPlayerModalVisible && gameClearedPlayer.length == 0}/>
-    </div>
+      }
+    </>
   );
 }
 
