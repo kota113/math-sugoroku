@@ -1,10 +1,9 @@
 import {FaEquals} from "react-icons/fa6";
 import React from "react";
-import data from '../assets/specialProblems.json'
 import {FractionDisplay} from "./FractionDisplay.tsx";
 import {NumberDisplay} from "./NumberDisplay.tsx";
 import {getOperationIcon} from "./utils.tsx";
-import {Block, Problem} from "../types.ts";
+import {Problem} from "../types.ts";
 
 const SpecialProblemDisplay = ({problem}: { problem: Problem }) => {
   return (
