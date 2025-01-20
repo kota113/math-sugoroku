@@ -89,14 +89,14 @@ function App() {
       // Handle correct answer
       moveGradually(moveForwardCount);
       await sleep(moveForwardCount*200+1000);
-      setCurrentPlayer((currentPlayer+1)%2)
+      setCurrentPlayer((currentPlayer+1)%Object.keys(currentPosition).length)
       // setProblems(gameManager.getRandomProblems(2, level))
     } else {
       // Handle incorrect answer
       // setProblems(gameManager.getRandomProblems(2, level))
       setAnswerBtnColour("red")
       await sleep(moveForwardCount*200+500);
-      setCurrentPlayer((currentPlayer+1)%2)
+      setCurrentPlayer((currentPlayer+1)%Object.keys(currentPosition).length)
       setTimeout(() => {
         setAnswerBtnColour('green')
       }, 1000);
