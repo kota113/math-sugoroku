@@ -18,18 +18,18 @@ import LevelUpModal from "./components/modals/LevelUpModal.tsx";
 function App() {
   const gameManager = useMemo(() => new GameManager(BLOCKS, problemsData as Problem[], 1), [])
   const [switchPlayerModalVisible, setSwitchPlayerModalVisible] = useState(false);
-  const [gameClearModalVisible, setGameClearModalVisible] = useState(false);
   const [levelUpModalVisible, setLevelUpModalVisible] = useState(false);
   const [problems, setProblems] = useState<Problem[]>([]);
   const [pathWays, setPathWays] = useState<PathWay[]>([]);
   const [currentPlayer, setCurrentPlayer] = useState<number>(0);
+  const [gameClearedPlayer, setGameClearedPlayer] = useState<number[]>([])
   const [specialProblem, setSpecialProblem] = useState<Problem | null>(null);
   const [block, setBlock] = useState<Block>();
   const [level, setLevel] = useState<'easy' | 'normal' | 'hard'>('easy');
   const [selectedProblem, setSelectedProblem] = useState<Problem | null>(null);
   const [currentPosition, setCurrentPosition] = useState<Record<number, number>>({
-    0: 0,
-    1: 0
+    0: 67,
+    1: 67
   });
   const [answerBtnColour, setAnswerBtnColour] = useState<'green' | 'red'>('green');
   const [answerInput, setAnswerInput] = useState<string>("");
@@ -48,13 +48,13 @@ function App() {
       setSpecialProblem(data[currentPosition[currentPlayer]]??null as Problem|null)
       const newLevel = currentPosition[currentPlayer] >= 15? 'normal': currentPosition[currentPlayer] >= 50? 'hard': 'easy'
       if (level != newLevel) {
-        // todo: チーム切り替わり時にも反応しそう。修正する
+        if ((level == 'easy' && ['normal', 'hard'].includes(newLevel)) || (level == 'normal' && newLevel == 'hard'))
         await showLevelUpModal();
       }
       setLevel(newLevel)
       setProblems(generateProblems(newLevel, 2))
       if (currentPosition[currentPlayer] >= 68) {
-        setGameClearModalVisible(true);
+        setGameClearedPlayer((_prev) => [..._prev, currentPlayer]);
       }
     }
     _().then();
@@ -103,6 +103,7 @@ function App() {
         setAnswerBtnColour('green')
       }, 1000);
     }
+    if (gameClearedPlayer.length > 0) return
     setSwitchPlayerModalVisible(true);
     await sleep(1500);
     setSwitchPlayerModalVisible(false);
@@ -133,8 +134,8 @@ function App() {
         </div>
       </div>
       <LevelUpModal isVisible={levelUpModalVisible}/>
-      <GameClearModal playerName={currentPlayer.toString()} isVisible={gameClearModalVisible}/>
-      <SwitchPlayerModal playerName={currentPlayer.toString()} isVisible={switchPlayerModalVisible}/>
+      <GameClearModal playerName={gameClearedPlayer[0]?.toString()} isVisible={gameClearedPlayer.length > 0}/>
+      <SwitchPlayerModal playerName={currentPlayer.toString()} isVisible={switchPlayerModalVisible && gameClearedPlayer.length == 0}/>
     </div>
   );
 }
