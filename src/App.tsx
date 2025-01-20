@@ -53,7 +53,7 @@ function App() {
       }
       setLevel(newLevel)
       setProblems(generateProblems(newLevel, 2))
-      if (currentPosition[currentPlayer] >= 49) {
+      if (currentPosition[currentPlayer] >= 68) {
         setGameClearModalVisible(true);
       }
     }

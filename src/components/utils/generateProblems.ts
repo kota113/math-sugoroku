@@ -5,16 +5,7 @@
 /**
  * 問題1問を表すインターフェース
  */
-// interface Problem {
-//   id: number;
-//   type: "add" | "subtract" | "multiply" | "divide";
-//   firstNumber: string;   // 整数または「分子/分母」形式の文字列
-//   secondNumber: string;  // 整数または「分子/分母」形式の文字列
-//   answer: string;        // 解答（整数または「分子/分母」形式）
-//   level: "easy" | "medium" | "hard";
-// }
-
-import {Problem} from "../../types.ts";
+import { Problem } from "../../types.ts";
 
 /**
  * min以上max以下のランダムな整数を返すヘルパー
@@ -91,15 +82,18 @@ function operateFractions(
 }
 
 /**
- * 結果の分数が正で、かつ数値として 10 以下かを判定する
+ * 結果の分数が「約分後に分母が1」かつ「正の整数で10以下」かを判定する
  * @param num 分子
  * @param den 分母
  * @returns boolean
  */
 function isValidResult(num: number, den: number): boolean {
+  // 分母が0ならfalse
   if (den === 0) return false;
-  const value = num / den;
-  return value > 0 && value <= 10;
+
+  // 約分後に分母が1になっている => 整数 かつ 1 <= 値 <= 10
+  // （ここで num と den はすでに reduceFraction 後のものが渡される想定です）
+  return den === 1 && num > 0 && num <= 10;
 }
 
 /**
@@ -188,7 +182,7 @@ function generateEasyProblems(count: number): Problem[] {
  * - 分子・分母は1～10
  * - 加減乗除
  * - 加減の場合は通分不要 (分母が同じ)
- * - 答えは 10 以下の正の分数または整数
+ * - 答えは約分後に必ず整数(1～10)
  */
 function generateMediumProblems(count: number): Problem[] {
   const problems: Problem[] = [];
@@ -214,6 +208,7 @@ function generateMediumProblems(count: number): Problem[] {
     }
 
     try {
+      // 四則演算してから約分
       const [numR, denR] = operateFractions(type, num1, den1, num2, den2);
       const [rn, rd] = reduceFraction(numR, denR);
 
@@ -238,7 +233,7 @@ function generateMediumProblems(count: number): Problem[] {
  * [Hard] 分数同士の複雑な計算
  * - 分子・分母は1～20
  * - 加減乗除（通分が必要な加減算を含む）
- * - 答えは 10 以下の正の分数または整数
+ * - 答えは約分後に必ず整数(1～10)
  */
 function generateHardProblems(count: number): Problem[] {
   const problems: Problem[] = [];
@@ -257,8 +252,10 @@ function generateHardProblems(count: number): Problem[] {
     const den2 = getRandomInt(1, 20);
 
     try {
+      // 四則演算してから約分
       const [numR, denR] = operateFractions(type, num1, den1, num2, den2);
       const [rn, rd] = reduceFraction(numR, denR);
+
       if (isValidResult(rn, rd)) {
         problems.push({
           id: 0,
@@ -278,24 +275,15 @@ function generateHardProblems(count: number): Problem[] {
 
 // =========== 実行部分 ===========
 
-// 各難易度で3問ずつ生成
-export default function generateProblems(level: 'easy' | 'normal' | 'hard', count: number): Problem[] {
-  // 各難易度で3問ずつ生成
+export default function generateProblems(level: "easy" | "normal" | "hard", count: number): Problem[] {
   switch (level) {
     case "easy":
-      return generateEasyProblems(count)
+      return generateEasyProblems(count);
     case "normal":
-      return generateMediumProblems(count)
+      return generateMediumProblems(count);
     case "hard":
-      return generateHardProblems(count)
+      return generateHardProblems(count);
     default:
-      return null
+      return [];
   }
-
-// // まとめてIDを再付番する
-//   let currentId = 1;
-//   return [...easySet, ...mediumSet, ...hardSet].map((p) => {
-//     return { ...p, id: currentId++ };
-//   });
 }
-
