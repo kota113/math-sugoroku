@@ -43,7 +43,7 @@ function App() {
     async function _() {
       const block = BLOCKS[currentPosition[currentPlayer]];
       setBlock(block);
-      setSpecialProblem(data[currentPosition[currentPlayer]][Math.floor(Math.random() * 2)]??null as Problem|null)
+      setSpecialProblem(data[currentPosition[currentPlayer]]?.[Math.floor(Math.random() * 2)]??null as Problem|null)
       const newLevel = currentPosition[currentPlayer] >= 15? 'normal': currentPosition[currentPlayer] >= 50? 'hard': 'easy'
       if (level != newLevel) {
         if ((level == 'easy' && ['normal', 'hard'].includes(newLevel)) || (level == 'normal' && newLevel == 'hard'))
