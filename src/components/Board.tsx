@@ -41,7 +41,7 @@ function listPathWayBlocks(pathWay: PathWay) {
 }
 
 function getRotation(currentPathWay: PathWay, nextPathWay: PathWay | null) {
-  let rotateClass = '';
+  let rotateClass: string;
   if (nextPathWay) {
     if (currentPathWay.direction == "horizontal") {
       if (currentPathWay.operation == "increment") {
@@ -126,6 +126,9 @@ const Board = ({currentPosition, pathWays, currentPlayerId}: {
             key={index}
             className={`relative w-16 h-16 border-2 ${ringColor} rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors ${currentPosition[currentPlayerId] == blockIndex ? currentPlayerBg : bgColour}`}
           >
+            {
+              currentPlayerBg && <img alt={"robot image"} className={'absolute z-30 stroke-neutral-950 opacity-90'} src={'robot_transparent.png'} />
+            }
             <img alt={""} src={imageSrc} className={`absolute z-10 w-16 h-16 ${rotateClass} ${filterClass}`}/>
             {
               block.type === "divide" ?
